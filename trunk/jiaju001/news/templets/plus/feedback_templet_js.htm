@@ -1,0 +1,7 @@
+{dede:page pagesize='5'/}
+{dede:datalist}
+document.write("<dl>");
+document.write("    <dt><strong> [field:username/]([field:ip function=substr(@me,0,strrpos(@me,'.'))/].*) </strong>发表于：<span>[field:dtime function=GetDateMk('@me')/]</span> </dt>");
+document.write("    <dd>[field:msg function='cnw_left_safe("@me",100)'/]</dd> ");
+document.write("</dl>");
+{/dede:datalist}

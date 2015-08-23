@@ -1,0 +1,9 @@
+<?PHP exit;?>	1257229480	chefulong	221.218.223.15	chefulong	1	grant	1
+<?PHP exit;?>	1257229480	chefulong	221.218.223.15	chefulong	2	grant	1
+<?PHP exit;?>	1257229480	chefulong	221.218.223.15	chefulong	3	grant	1
+<?PHP exit;?>	1257229530	chefulong	221.218.223.15	山村院落	10	grant	1
+<?PHP exit;?>	1257995853	chefulong	221.218.222.190	山外有山	3	grant	a
+<?PHP exit;?>	1257995853	chefulong	221.218.222.190	山外有山	10	grant	a
+<?PHP exit;?>	1257995947	chefulong	221.218.222.190	黑色珍珠	6	grant	j
+<?PHP exit;?>	1257995947	chefulong	221.218.222.190	黑色珍珠	10	grant	j
+<?PHP exit;?>	1259573371	chefulong	123.113.153.199	maomao	11	grant	大马仕

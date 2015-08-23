@@ -1,0 +1,14 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("global","",1121,1150);
+$z[1][4]['name']="keyword";
+$z[2]=Array("global","",1323,1353);
+$z[2][4]['name']="sortform";
+$z[3]=Array("global","",1727,1756);
+$z[3][4]['name']="sexform";
+$z[4]=Array("datalist","\r\n  <tr height=\"26\" align=\"center\" bgcolor=\"#FFFFFF\" onMouseMove=\"javascript:this.bgColor='#EDF7D0';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\">\r\n    <td>\r\n	<a href=\"member_view.php?ID=[field:ID/]\"><u>[field:userid/]</u></a> <br>\r\n	[field:logintime function=\"GetDateMk('@me')\"/]\r\n    </td>\r\n    <td> [field:email function='htmlspecialchars(@me)'/]<br>\r\n      昵称：[field:uname function='htmlspecialchars(@me)'/]\r\n      [field:matt function='GetMAtt(@me)'/] </td>\r\n    <td>[field:sex /]</td>\r\n    <td> [field:spaceshow/]/ [field:pageshow/] </td>\r\n    <td> [field:membertype function=\"GetMemberName('@me','ut')\"/] </td>\r\n    <td> [field:money /] </td>\r\n    <td> [field:scores /] </td>\r\n    <td>\r\n	<table width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n        <tr>\r\n          <td align=\"center\" height=\"25\"> <a href=\"member_view.php?ID=[field:ID/]\">资料</a>\r\n            | <a href=\"member_do.php?ID=[field:ID/]&dopost=recommend&matt=[field:matt/]\">推荐</a><a href=\"content_list.php?memberid=[field:ID/]\" target=\"_blank\">\r\n            </a> | <a href=\"member_do.php?ID=[field:ID/]&dopost=delmember\">删除</a></td>\r\n        </tr>\r\n        <tr>\r\n         <td align=\"center\" height=\"25\" style=\"border-top:1px solid #cccccc\">\r\n            <a href=\"../include/jump.php?gurl=[field:global name='cfg_memberurl'/]/index.php?uid=[field:userid/]\" target=\"_blank\">空间</a>\r\n           | <a href=\"content_list.php?memberid=[field:ID/]\" target=\"_blank\">文档</a>\r\n           | <a href=\"media_main.php?memberid=[field:ID/]\" target=\"_blank\">附件</a>\r\n          </td>\r\n        </tr>\r\n      </table></td>\r\n  </tr>\r\n  ",3299,4955);
+$z[5]=Array("pagelist","",5031,5058);
+$z[5][4]['listsize']="6";
+
+?>

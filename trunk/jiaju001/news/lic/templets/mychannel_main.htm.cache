@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="50";
+$z[1]=Array("datalist","\r\n		  <tr align=\"center\" bgcolor=\"#FFFFFF\" onMouseMove=\"javascript:this.bgColor='#EFEFEF';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\"> \r\n        <td>[field:ID/]</td>\r\n        <td><a href='[field:mancon/]?channelid=[field:ID/]'>[field:typename/]</a></td>\r\n        <td>[field:nid/]</td>\r\n        <td>[field:addtable function=\"str_replace('#@__',\$GLOBALS{'cfg_dbprefix'},'@me')\"/]</td>\r\n        <td>[field:isshow function='GetSta(@me,\$GLOBALS{\"row\"}{\"ID\"})'/]</td>\r\n        <td>[field:issystem function='IsSystem(@me)'/]</td>\r\n        <td>\r\n         <a href='mychannel_edit.php?ID=[field:ID/]&dopost=edit'><img src='img/manage1.gif' alt='更改' /></a> | \r\n		     <a href='mychannel_edit.php?ID=[field:ID/]&dopost=delete'><img src='img/file_del.gif' alt='删除' /></a> |  \r\n         <a href='mychannel_edit.php?ID=[field:ID/]&dopost=copy'><img src='img/copy.gif' alt='复制' /></a> | \r\n         <a href='mychannel_edit.php?ID=[field:ID/]&dopost=gettemplets'><img src='img/part-index.gif' alt='模板' /></a> \r\n		    </td>\r\n     </tr>\r\n		   ",1884,2960);
+$z[2]=Array("pagelist","",3217,3244);
+$z[2][4]['listsize']="6";
+
+?>

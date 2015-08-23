@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{dede:global name='cfg_webname'/}</title>
+<meta name="description" content="{dede:global name='cfg_description'/}" />
+<meta name="keywords" content="{dede:global name='cfg_keywords'/}" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<link href="http://www.jiaju001.com/images/common.css" rel="stylesheet" type="text/css">
+<style>
+<!--
+.ad1{ width:725px; height:90px; margin-top:5px; float:left}
+.lin{border:#F3C23F 1px solid}
+.lin2{ border:#CCCCCC 1px solid; height:100%; padding:5px;}
+.lin2 .list li,.jdt_x .list li,.jdt_xr li,.jdt_r_rx li,.m_m_r_1 li{background:url(/templets/images/ico_4.gif) 7px 10px no-repeat; line-height:20px}
+.lin2 .im,.jdt_x .im{width:130px; float:left;margin-left:3px; margin-top:3px}
+.lin2 .im img{margin:7px 0px;border:1px solid #CCCCCC;padding:1px}
+.lin2 .list,.jdt_x .list{width:210px; float:right}
+.cen{clear:both;margin:0 auto;}
+.clear{ clear:both} .p4{padding:5px;}
+.jdt{ width:300px; height:250px; float:left;}
+.jdt_r{ width:420px;height:258px !important; height:250px; float:left; margin-left:5px}
+.jdt_r_r{ width:100%; height:90px !important; height:79px; background-color:#FFFADD}
+.jdt_r_r h3{color:#F93C0D; font-size:16px;text-align:center}
+.tj{text-align:center}
+.jdt_r_rx{ width:100%; height:121px;padding-top:10px}
+.jdt_x li div,.jdt_xr li div,.jdt_r_rx li div,.lin2 li div{float:right}
+.jdt_r_rxx{ width:100%; height:92px; background-color:#FFF5DB}
+.jdt_r_rxxn{ width:100%; height:34px; border-bottom:#F3C23F 1px solid dotted}
+.right{ width:217px; height:292px; float:right}
+.right_s{ height:292px;}
+.right_ss{ height:22px; border-bottom:#F3C23F 1px solid dotted;background-color:#FFFADD}
+.right_x{height:337px !important; height:253px; border:#92DC0D 1px solid; margin-top:5px}
+.right_xs{ width:100%; height:22px; border-bottom:#9BB70B 1px solid dotted;background-color:#AFD00D;line-height:22px}
+.jdt_x{ width:360px; height:157px; float:left; margin-top:5px; border:#F3C23F 1px solid;clear:both;}
+.jdt_xr{ width:358px; height:157px; float:left; margin-top:5px; border:#F3C23F 1px solid; margin-left:5px}
+.jdt_xs{background-image:url(images/bo_03.gif); height:24px; border-bottom:#F3C23F 1px solid; text-align:left; color:#800000; padding-left:5px; line-height:24px}
+.m{ width:950px; height:365px; margin-top:5px}
+.m_s{height:25px;background-image:url(images/bo_04.gif); text-align:right;line-height:25px}
+.m_s_l{ width:110px; height:22px; background-image:url(images/bo_05.gif); float:left; color:#FFFFFF; line-height:22px}
+.m_m_l{ width:745px; height:365px; float:left}
+.m_m_ll{ width:360px; height:210px !important; height:182px; float:left; margin-bottom:35px !important; margin:5px}
+.m_m_lr{ width:360px; height:210px !important; height:182px; float:right; margin-bottom:35px !important; margin:5px}
+.m_m_r{ width:197px; height:425px; float:right;  margin:5px 3px 0px 0px}
+.m_m_r_1{width:195; height:150px; border:#CCCCCC 1px solid;}
+.m_text{text-align:left; color:#800000; padding-left:20px; line-height:24px; font-weight:bold}
+.x_s{ border-bottom:#CCCCCC 2px solid; height:24px}
+.x_l{ float:left; width:300px; height:355px; margin:7px}
+.news{ width:728px; height:590px; float:left}
+.news_text{ font-size:16px; line-height:24px; font-weight:bold; padding:5px; color:#0033CC}
+.news_left{ text-align:left }
+.note li{padding:0px 0px;}
+-->
+</style>
+
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<div class="wrap" style="margin-top:5px;"><div class="jdt">
+<script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var focus_width=300;
+var focus_height=260;
+var text_height=0;
+var pics = "";
+var links = "";
+var texts = "";
+var swf_height = focus_height+text_height;
+var defJpeg = "/images/jpg.jpg";
+{dede:arclist row=5 titlelen=24 orderby=pubdate att=3}
+linkarr[[field:global name=autoindex/]] = "[field:arcurl/]";
+picarr[[field:global name=autoindex/]] = "[field:litpic/]";
+textarr[[field:global name=autoindex/]] = "[field:title/]";
+{/dede:arclist}
+for(i=1;i<picarr.length;i++){
+  if(picarr[i].indexOf("jpg")==-1 && picarr[i].indexOf("JPG")==-1) picarr[i] = defJpeg;
+  if(pics=="") pics = picarr[i];
+  else pics += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="{dede:global name='cfg_templeturl'/}/images/slide.swf">');
+document.write('<param name="quality" value="high"><param name="bgcolor" value="#ffffff">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+document.write('<embed src="images/slide.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+</div>
+
+<div class="jdt_r">
+<div class="jdt_r_r lin">
+{dede:arclist typeid='' row=1 infolen=124 titlelen=40 att='2'}
+<a href="[field:filename /]" target="_blank" title="[field:title/]"><h3>[field:title /]</h3></a>
+<p class="p4">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...[详细]</a></p>{/dede:arclist}
+<div class="tj">
+{dede:arclist row=1 titlelen=24 orderby=pubdate typeid=12 att=4}
+[[field:textlink/]]
+{/dede:arclist}
+{dede:arclist row=1 titlelen=24 orderby=pubdate  att=4}
+[[field:textlink/]]
+{/dede:arclist}
+</div>
+</div>
+<div class="jdt_r_rx">{dede:artlist orderby=pubdate typeid=3 row='14' col=2 titlelen='24'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div>
+
+</div>
+<div class="right">
+<!--#include virtual="/include/index.right.php" -->
+<div class="right_x">
+<div class="right_xs">推荐装饰公司</div>
+{dede:myad name='zsgs'/}</div>
+</div>
+<div class="ad1">{dede:myad name='gg1'/}</div>
+<div class="jdt_x">
+<div class="jdt_xs"><b>编辑推荐</b></div>
+<div class="im">{dede:arclist row=1 titlelen=0 orderby=pubdate typeid=12 type='image.'}
+<a href="[field:arcurl /]" ><img src="[field:picname /]" alt="[field:title /]" width="101" height="125"  border="0" /></a>
+{/dede:arclist}</div><div class="list">{dede:artlist row=6 titlelen='30' orderby=pubdate att='5'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div>
+</div>
+<div class="jdt_xr">
+<div class="jdt_xs"><b>《法制晚报》北京家居 在线版</b></div>
+{dede:artlist orderby='pubdate' row='6' titlelen='60' typeid='2'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}
+</div>
+<div class="clear"></div>
+</div>
+<div class="wrap"><div style="margin:4px 0px" class="lin"><embed src='http://www.jiaju001.com/images2/0907/8-8.swf' quality='high' width='950' height='90' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash' ></embed></div>
+<div>
+<div style="width:950px;height:100px;margin:3px 0px 5px 0px; float:left">{dede:myad name='mm'/}<div style="clear:both"></div></div>
+</div>
+<div class="wrap lin" style="height:530px !important; ">
+<div class="m_s">
+<div class="m_s_l c"><b>装修知识库</b></div> <a href="http://www.jiaju001.com/list/diban.html">地板</a>|<a href="http://www.jiaju001.com/list/cizhuan.html">瓷砖</a>|<a href="http://www.jiaju001.com/list/weiyu.html">卫浴</a>|<a href="http://www.jiaju001.com/list/chugui.html">橱柜</a>|<a href="http://www.jiaju001.com/list/men.html">门窗型材</a>|<a href="http://www.jiaju001.com/list/jiadian.html">家装电器</a>|<a href="http://www.jiaju001.com/list/bigui.html">壁柜和衣帽间</a>|<a href="http://www.jiaju001.com/list/youqi.html">油漆涂料</a>|<a href="http://www.jiaju001.com/list/dianliao.html">电工电料</a>|<a href="http://www.jiaju001.com/list/bizhi.html">壁纸</a>|<a href="http://www.jiaju001.com/list/dengju.html">灯具</a>|<a href="http://www.jiaju001.com/list/sanreqi.html">散热器</a>|<a href="http://www.jiaju001.com/list/jiayongdianqi.html">家用电器</a>|<a href="http://www.jiaju001.com/list/jiaju.html">家具</a>|<a href="http://www.jiaju001.com/list/diaoding.html">吊顶</a></div>
+<div class="m_m_l">
+
+<div>
+<div class="m_m_ll">
+	<div class="m_text" >装修知识</div>
+	<div class="lin2">
+<div class="im">{dede:arclist row=2 titlelen=0 orderby=pubdate typeid=6 type='image.'}
+<a href="[field:arcurl /]" ><img src="[field:picname /]" alt="[field:title /]" width="108" height="85"  border="0" /></a>
+{/dede:arclist}
+</div><div class="list">
+{dede:artlist orderby='pubdate' row='10' titlelen='30' typeid='6'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div></div>
+</div>
+<div class="m_m_lr">
+	<div class="m_text">装修DIY</div>
+	<div class="lin2">
+<div class="im">{dede:arclist row=2 titlelen=0 orderby=pubdate typeid=7 type='image.'}
+<a href="[field:arcurl /]" ><img src="[field:picname /]" alt="[field:title /]" width="108" height="85"  border="0" /></a>
+{/dede:arclist}
+</div><div class="list">
+{dede:artlist orderby='pubdate' row='10' titlelen='30' typeid='7'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div></div>	
+
+</div>
+<div class="clear"></div>
+</div>
+<div>
+<div class="m_m_ll">
+	<div class="m_text">装修故事</div>
+	<div class="lin2">
+<div class="im">{dede:arclist row=2 titlelen=0 orderby=pubdate typeid=8 type='image.'}
+<a href="[field:arcurl /]" ><img src="[field:picname /]" alt="[field:title /]" width="108" height="85"  border="0" /></a>
+{/dede:arclist}
+</div><div class="list">
+{dede:artlist orderby='pubdate' row='10' titlelen='30' typeid='8'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div></div>
+
+</div>
+<div class="m_m_lr">
+	<div class="m_text">绿色装修</div>
+	<div class="lin2">
+<div class="im">{dede:arclist row=2 titlelen=0 orderby=pubdate typeid=9 type='image.'}
+<a href="[field:arcurl /]" ><img src="[field:picname /]" alt="[field:title /]" width="108" height="85"  border="0" /></a>
+{/dede:arclist}
+</div><div class="list">
+{dede:artlist orderby='pubdate' row='10' titlelen='30' typeid='9'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div></div>
+
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="m_m_r">
+<div class="m_text">监理验收</div>
+<div class="m_m_r_1">{dede:artlist orderby='pubdate' row='7' titlelen='30' typeid='13'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div>
+<div class="m_text">政策法规</div>
+<div class="m_m_r_1">{dede:artlist orderby='pubdate' row='7' titlelen='27' typeid='14'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}</div>
+{dede:myad name='news2'/}
+</div>
+</div>
+
+<div class="wrap" style="margin-top:5px">
+
+<table width="950px" height="20" border="0" cellspacing="0" cellpadding="0" style="text-align:center">
+  <tr>
+
+<td style='width:180px;'><div style="position:relative">
+      <EMBED style="position:relative; z-index:0; " src="/images/dh180.swf"  quality=high width=180 height=100 TYPE="application/x-shockwave-flash"  PLUGINSPAGE=" http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"  wmode="opaque">      
+      <a href=" http://fuwu.andfang.com" target="_blank" style="cursor:pointer">
+        <div style="position:absolute;filter:alpha(opacity=0);opacity :0;-moz- opacity:0;left:0px;top:0px; background:#CDEAF6;width:180px;height:100px;z-index:10">
+        </div>
+      </a>
+    </div>
+      </a>
+    </div>
+      </td>
+
+    <td><a href="http://www.jc186.cn/" target="_blank"><img src="/images/nfjcw.jpg"></a></td>
+    <td><a href="http://www.myfun7.com/" target="_blank"><img src="/images/myfun7.gif"></a></td>
+    <td><a href="http://bbs.tv8zone.com/thread-37200-1-1.html" target="_blank"><img src="/images/360.gif"></a></td>
+    
+    
+  </tr>
+</table>
+</div>
+<div class="wrap" style="margin-top:5px"><table width="100%" height="20" border="0" cellspacing="0" cellpadding="0" style="text-align:center">
+  <tr>
+    <td><a onclick="window.open('http://www.jiaju001.com/page/mianzhuan.html','notice','width=350,height=610,scrollbars=no')" href="#">面砖计算器</a></td>
+    <td><a onclick="window.open('http://www.jiaju001.com/page/dizhuan.htm','notice','width=350,height=610,scrollbars=no')" href="#">地砖计算器</a></td>
+    <td><a onclick="window.open('http://www.jiaju001.com/page/diban.htm','notice','width=350,height=610,scrollbars=no')" href="#">地板计算器</a></td>
+    <td><a onclick="window.open('http://www.jiaju001.com/page/qiangzhi.htm','notice','width=350,height=610,scrollbars=no')" href="#">墙纸计算器</a></td>
+    <td><a onclick="window.open('http://www.jiaju001.com/page/chuanglian.htm','notice','width=350,height=610,scrollbars=no')" href="#">窗帘计算器</a></td>
+    <td><a onclick="window.open('http://www.jiaju001.com/page/tuliao.htm','notice','width=350,height=610,scrollbars=no')" href="#">涂料计算器</a></td>
+  </tr>
+</table><div class="clear"></div></div>
+
+<!--
+<div class="wrap">
+	<div class="x_s">社区精选</div>
+	<div>
+		<div class="x_l">
+			<div>新贴放送</div>
+		</div>
+		<div class="x_l">
+			<div>精华推荐</div>
+		</div>
+		<div class="x_l">
+			<div>热贴排行</div>
+		</div>
+	</div>
+<div class="clear"></div>
+</div>-->
+<div class="wrap lin" style="margin-top:5px !important; margin-top:5px;"><div class="p4"><div style="text-align:right"><div style="float:left"><strong>友情连接</strong></div><a href='{dede:field name='phpurl'/}/flink.php'>更多>></a> | <a href="{dede:field name='phpurl'/}/flink-add.php">申请加入</a></div>
+{dede:flink row='24' linktype=2/}
+</div></div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

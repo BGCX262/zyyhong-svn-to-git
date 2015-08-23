@@ -1,0 +1,191 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>通行证设置</title>
+<link href="css_body.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+td{
+padding-left:6px;
+}
+</style>
+</head>
+<body >
+<script language='javascript' src='main.js'></script>
+<script language="JavaScript">
+var basehost = "<?php echo $cfg_basehost?>";
+
+templets = new Array();
+
+templets[0]  = '__dz55;论坛;/bbs;/bbs/logging.php?action=login;';
+templets[0] += '/bbs/logging.php?action=logout;/bbs/register.php;/bbs/memcp.php?action=profile';
+
+templets[1]  = '__pw6;论坛;/bbs;/bbs/login.php;';
+templets[1] += '/bbs/login.php?action=quit;/bbs/register.php;/bbs/profile.php?action=modify';
+
+templets[2]  = '__dvbbs71;论坛;/bbs;/bbs/login.asp;';
+templets[2] += '/bbs/logout.asp;/bbs/reg.asp;/bbs/modifyadd.asp';
+
+function ShowTemplet(sysname){
+   var tmppos = 0;
+   for(var i=0;i<templets.length;i++){
+     if(templets[i].indexOf(sysname)>0){ tmppos = i; break; }
+   }
+   stemplets = templets[tmppos].split(';');
+   //alert(stemplets[2]);
+   
+   $Obj('pp_name').value = stemplets[1];
+   $Obj('pp_indexurl').value = basehost+stemplets[2];
+}
+
+function _SelType(_v){
+	if(_v == 0){
+		$Obj('typename').innerHTML = "正向接口";
+		$Obj('pp_c').style.display = "none";
+		$Obj('pp_s').style.display = "block";		
+	}else{
+		$Obj('typename').innerHTML = "反向接口";
+		$Obj('pp_c').style.display = "block";
+		$Obj('pp_s').style.display = "none";
+	}
+
+}
+</script>
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+  <div class="bodytitletxt">整合接口设置</div>
+</div>
+<table width="96%" border="0" cellpadding="1" cellspacing="1" align="center" class="tbtitle" style="	background:#E2F5BC;">  <form action="sys_passport.php" method="post">
+    <input type="hidden" name="action" value="save">
+    <tr> 
+      <td height="26" colspan="2" bgcolor="#EDF9D5"> 
+        <b>&nbsp;&nbsp;DedeCms系统配置参数</b> - <strong>通行证设置</strong></td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="30" colspan="2"><img src="img/help.gif" width="16" height="16">
+      通行证系统是为解决多个系统之间会员数据共享问题而开发的，是一套跨服务器，跨域名，跨语言的会员共享系统，实现了不同系统之间共享会员数据和同步会员基本信息，支持不同域名下同步登录，同步退出功能。
+      <br />  
+	  
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="30" bgcolor="#FFFFFF">是否启用通行证：<br> </td>
+      <td bgcolor="#FFFFFF">
+      	<input name="pp_isopen" type="radio" value="1" <?php  if($cfg_pp_isopen==1) echo " checked"; ?>>
+        启用 
+        <input name="pp_isopen" type="radio"   value="0"<?php  if($cfg_pp_isopen==0) echo " checked"; ?>>
+        不启用      </td>
+    </tr>
+	<tr bgcolor="#FFFFFF"> 
+      <td height="30" bgcolor="#FFFFFF">选择通行证方式：<br> </td>
+      <td bgcolor="#FFFFFF" style="padding-left:6px;">
+      	<label>
+        <select name="pp_type" Onchange="_SelType(this.value)">
+		  <option value="0">选择通行证方式</option>
+          <option value="0">正向整合接口</option>
+		  <option value="1">返向整合接口</option>
+        </select>
+      </label></td>
+    </tr>
+	<tr>
+            <td height="25" colspan="2"><strong><b>&nbsp;&nbsp;现进行通行证方式: <span id="typename">正向接口</span></b></td>
+    </tr>
+<tr bgcolor="#CCEDFD"  style="display:none;" id="pp_c"> 
+      <td height="30" colspan="2" bgcolor="#EDF9D5" style="padding-left:0px;">
+	  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+          <tr bgcolor="#FFFFFF" class="tbtitle">
+            <td height="30">整合系统的主页：</td>
+            <td><input name="pp_indexurl" type="text" id="pp_indexurl" style="width:60%" value="<?php echo $cfg_pp_indexurl?>" />
+            </td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="tbtitle">
+            <td height="30">会员注册网址：</td>
+            <td><input name="pp_regurl" type="text" id="pp_regurl" style="width:60%" value="<?php echo $cfg_pp_regurl?>" />
+            </td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="tbtitle">
+            <td height="30">会员登陆网址：</td>
+            <td><input name="pp_loginurl" type="text" id="pp_loginurl" style="width:60%" value="<?php echo $cfg_pp_loginurl?>" />
+            </td>
+          </tr>
+          <tr bgcolor="#FFFFFF" class="tbtitle">
+            <td height="30">会员退出网址：</td>
+            <td><input name="pp_exiturl" type="text" id="pp_exiturl" style="width:60%" value="<?php echo $cfg_pp_exiturl?>" />
+            </td>
+          </tr>
+          <tr>
+            <td height="25" bgcolor="#FFFFFF">通行证密钥：</td>
+            <td height="25" bgcolor="#FFFFFF"><?php echo $cfg_cookie_encode?> 
+      </td>
+          </tr>
+
+        </table></td>
+</tr>
+
+<tr bgcolor="#CCEDFD" style="display:block;" id="pp_s"> 
+      <td height="30" colspan="2" bgcolor="#EDF9D5" style="padding-left:0px;"><table width="100%" border="0" cellspacing="1" cellpadding="1">
+          
+<tr bgcolor="#FFFFFF"> 
+      <td height="30">通行证密钥：</td>
+      <td>
+      	<?php echo $cfg_cookie_encode?></td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="30">指定系统：</td>
+      <td> 
+	   ·<a href="javascript:ShowTemplet('_pw6')"><u>PHPWIND6.*</u></a> 
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="30">整合系统名称：</td>
+      <td>
+      	<input name="pp_name" type="text" id="pp_name" style="width:60%" value="<?php echo $cfg_pp_name?>">
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFFF"> 
+      <td height="30">整合系统的主页：</td>
+      <td>
+      	<input name="pp_indexurl" type="text" id="pp_indexurl" style="width:60%" value="<?php echo $cfg_pp_indexurl?>">
+      </td>
+    </tr>
+</table>
+	<table width="100%" border="0" cellspacing="1" cellpadding="1">
+        <tr>
+          <td bgcolor="#FFFFFF">通行证设置：
+	        <br />	  </td>
+          <td bgcolor="#FFFFFF">客户器端设置：</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF">1、是否开启通行证：是 </td>
+          <td bgcolor="#FFFFFF">1、通行证服务器地址：<?php echo $cfg_basehost?> </td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF">2、通行证私有密钥：<?php echo $cfg_cookie_encode?> </td>
+          <td bgcolor="#FFFFFF">2、通行证登录地址：member/login.php </td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF">3、将该网站做为通行证的：<span style="color:red">客户端</span>.</td>
+          <td bgcolor="#FFFFFF">3、通行证退出地址：member/index_do.php?fmdo=login&amp;dopost=exit</td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF">4、通行证注册地址：member/index_do.php?fmdo=user&amp;dopost=regnew </td>
+        </tr>
+      </table>
+</td>
+</tr>
+    <tr bgcolor="#CCEDFD"> 
+      <td height="37" colspan="2"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td align="left" style="background:#F9FFE6;padding:7px 6px 6px 30px;" >
+            	<input type="submit" name="Submit" value="保存设置" class="inputbut" />
+              &nbsp;
+            <input type="reset" name="Submit2" value="重置" class="inputbut" />            </td>
+          </tr>
+      </table></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>

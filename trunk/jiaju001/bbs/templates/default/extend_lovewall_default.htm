@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="extend/lovewall/lovewall.css" />
+<SCRIPT src="./extend/lovewall/cme_index.js" type=text/javascript></SCRIPT>
+<!--{loop $lovewall $key $love}-->
+<div id="scrip{$love['id']}" class="Message" style="position:absolute; left:{$love['posleft']}px;top:{$love['postop']}px;z-index:60" onmousedown="Move(this, event)" ondblclick="showLightbox({$love['id']})">
+<div class="Style{$love['colorid']}">
+<div class="Num">×ÖÌõ±àºÅ£º{$love['id']} <img src="extend/lovewall/icon_close.gif" alt="¹Ø±Õ" onclick="delMessage('{$love['id']}')"></div>
+<p class="Detail"><img src="extend/lovewall/icon_{$love['moodid']}.gif" class="Heart" /><span class="Head">{$love['nickname']} </span><br />$love['lovesay'] </p>
+<p class="Sign">{$love['mysign']} </p>
+<P class="Date">{$love['lovetime']}</p></div></div>
+<!--{/loop}-->
+<div id="overlay" style="display:none;position:absolute;top:0px;left:0px;width:100%;" onClick="hideLightbox();"></div>

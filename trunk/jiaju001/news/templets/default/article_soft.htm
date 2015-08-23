@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field name='title'/} - {dede:global name='cfg_webname'/} - powered by dedecms</title>
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<link href="{dede:field name='templeturl'/}/style/dede.css" rel="stylesheet" type="text/css" />
+<link href="{dede:field name='templeturl'/}/style/soft.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!--头部开始-->
+<div class="top cbody">
+	<div class="toplogo"><a href="{dede:global name='cfg_basehost'/}"><img src="{dede:field name='templeturl'/}/images/toplogo.gif" width="200" height="60" alt="{dede:global name='cfg_webname'/}" /></a></div>
+	<div class="topbanner"><script language="javascript" type="text/javascript" src="{dede:global name='cfg_cmspath'/}/top.js"></script></div>
+	<div class="toplink">		<ul>
+			<li><a href="{dede:field name='phpurl'/}/heightsearch.php">高级搜索</a></li>
+			<li><a href='#' onClick="javascript:window.external.AddFavorite('{dede:global name="cfg_basehost"/}','{dede:global name="cfg_webname"/}');">收藏本站</a></li>
+			<li><a href="{dede:field name='phpurl'/}/sitemap.html">网站地图</a> </li>
+		  <li><a href="{dede:field name='phpurl'/}/rssmap.html">RSS订阅</a></li>
+		</ul>
+	</div>
+</div>
+<!--导航栏-->
+<div class="topmenu cbody">	<ul>
+		<li><a href="/">首页</a></li>
+        {dede:channel type='top' row='8' currentstyle="<li><a href='~typelink~' class='thisclass'>~typename~</a> </li>"}<li><a href='[field:typelink/]'>[field:typename/]</a> </li>
+        {/dede:channel}
+		<li><a href='{dede:field name='specurl'}{/dede:field}/index.php'>专题</a></li>
+	</ul>
+	<div class="rssbut">
+		<a href="{dede:field name='phpurl'/}/rssmap.html"><img src="{dede:field name='templeturl'/}/images/rss_button.gif" alt="RSS" /></a>
+	</div>
+</div>
+<!--搜索条-->
+<div class="topsearch cbody">
+	<div class="title"></div>
+	<div class="inpbox">    <form action="{dede:field name='phpurl'/}/search.php" name="formsearch">
+		<input type="hidden" name="kwtype" value="1">
+		<input name="keyword" id="keyword" type="text" class="searchtxt" />
+		<select name="searchtype" id="searchtype">
+			<option value="titlekeyword" selected>智能模糊搜索</option>
+			<option value="title">仅搜索标题</option>
+		</select>
+		<input type="image" src="{dede:field name='templeturl'/}/images/topsearch_submit.gif" />
+    </form>
+	</div>
+	<div class="hots">		<strong>热门关键字：</strong>
+		{dede:hotwords num='5' subday='30'/}</div>
+</div>
+
+<!--内容-->
+<div class="main cbody margintop">
+	<!--左侧-->
+	<div class="pleft">
+		<!--分类列表-->
+		<div class="clsbox">
+			<ul>
+            {dede:channel type='self'}<li><a href="[field:typelink/]"><span>[field:typename/]</span></a></li>{/dede:channel}
+			</ul>
+		</div>
+
+		<!--热门下载-->
+		<div class="leftlist margintop">
+			<dl>
+				<dt>热门下载</dt>
+				<dd>
+					<ul>
+						{dede:arclist row=15 titlelen=24 orderby=click channel=3}
+						<li>[field:textlink/]</li>
+						{/dede:arclist}
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<!--热门下载-->
+		<div class="leftlist margintop">
+			<dl>
+				<dt>热门资讯</dt>
+				<dd>
+					<ul>
+						{dede:arclist row=15 titlelen=24 orderby=postnum channel=1}
+						<li>[field:textlink/]</li>
+						{/dede:arclist}
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+	</div>
+
+	<!--右侧-->
+	<div class="pright">
+		<!--位置导航-->
+		<div class="thisplace">
+			<div class="title"></div>
+	  <div class="placenav">
+				<span>当前位置 :</span>
+				{dede:field name='position'/}
+		  </div>
+		</div>
+
+		<!--列表标题-->
+		<div class="stitle margintop">{dede:field name='title'/}</div>
+
+		<!--内容浏览-->
+		<div class="sview margintop">
+			<!--软件信息-->
+			<div class="sinfo">
+				<ul>
+					<li><strong>文件类型：</strong>	{dede:field name='filetype'/}</li>
+					<li><strong>软件大小：</strong>	{dede:field name='softsize'/}</li>
+					<li><strong>下载次数：</strong> <script src="{dede:field name='phpurl'/}/countdownloads.php?aid={dede:field name='aid'/}&cid={dede:field name='channel'/}" language="javascript"></script></li>
+					<li><strong>软件类别：</strong>	{dede:field name='softtype'/}</li>
+					<li><strong>软件语言：</strong>	{dede:field name='language'/}</li>
+					<li><strong>授权方式：</strong>	{dede:field name='accredit'/}</li>
+					<li><strong>运行环境：</strong>	{dede:field name='os'/}</li>
+					<li><strong>更新时间：</strong>	{dede:field name='pubdate' function="GetDateMk('@me')"/}</li>
+					<li><strong>官方网址：</strong>	<a href="{dede:field name='officialurl'/}">{dede:field name='officialurl'/}</a></li>
+                    <li><strong>软件Tag：</strong>{dede:tag type='current'/}</li>
+				</ul>
+    <!--缩略图-->
+				<div class="spic"> <img src="{dede:field name='litpic'/}" width="282" height="206" /></div>
+			</div>
+<!--简介-->
+			<div class="vtitle">软件简介：</div>
+			<div class="sintro">
+            {dede:field name='introduce'/}
+            </div>
+	    <!--下载-->
+			<div class="vtitle">下载地址：</div>
+			<div class="sdown">
+				<strong>下载地址：</strong>
+				{dede:field name='softlinks'/}
+			</div>
+			<div class="downdoc">
+				☉推荐使用网际快车下载本站软件，使用 WinRAR v3.10 以上版本解压本站软件。<br />
+				☉如果这个软件总是不能下载的请点击报告错误,谢谢合作!!<br />
+				☉下载本站资源，如果服务器暂不能下载请过一段时间重试！<br />
+				☉如果遇到什么问题，请到本站论坛去咨寻，我们将在那里提供更多 、更好的资源！<br />
+				☉本站提供的一些商业软件是供学习研究之用，如用于商业用途，请购买正版。 <br />
+			</div>
+		</div>
+
+		<!--评论-->
+		<div class="comment">
+			<!--评论:标题-->
+			<div class="commenttitle">
+				<div class="title"><strong>最新评论</strong>共有 {dede:field
+name='postnum'/} 位网友发表了评论 </div>
+				<div class="gotopost"><a href="{dede:field name='phpurl'/}/feedback.php?arcID={dede:field name=ID/}">查看所有评论</a></div>
+			</div>
+			<!--评论内容-->
+			<div class="commentbox">
+				<script src="{dede:field name='phpurl'/}/feedback_js.php?arcID={dede:field name='ID'/}"></script>
+			</div>
+			<!--发表评论:标题-->
+			<div class="posttitle"><strong>发表评论</strong></div>
+			<!--发表评论-->
+            <form action="{dede:field name='phpurl'/}/feedback.php?action=send" method="post" name="feedback">
+			<input type="hidden" name="arcID" value="{dede:field name="id"/}">
+			<div class="postbox">
+				<div class="txtbox">
+					<strong>评论内容：</strong>不能超过250字，需审核，请自觉遵守互联网相关政策法规。
+					<textarea name="msg" cols="60" rows="6"></textarea>
+				</div>
+				<div class="userbox">
+					<dl>
+						<dd>
+							<strong>用户名：</strong><input name="username" class="username" type="text" maxlength="20" />
+							<strong>密码：</strong><input name="pwd" class="password" type="password" maxlength="20" />
+						</dd>
+						<dd></dd>
+						<dd class="mtop"><input name="notuser" type="checkbox" value="1" /> <strong>匿名?</strong></dd>
+						<dd><input name="sb" type="button" class="submit" value="发表评论" onClick='javascript:if(document.feedback.msg.value!="") document.feedback.submit(); else alert("评论内容不能为空！");'/></dd>
+						<dd class="mtop"><a href="{dede:field name='memberurl'/}/index_do.php?fmdo=user&dopost=regnew" target="_blank">注册</a></dd>
+				  </dl>
+				</div>
+			</div></form>
+		</div>
+	</div>
+
+	<div class="floatclear"><!--清除浮动--></div>
+</div>
+
+
+<div class="footer cbody margintop">
+		<div class="copyright"> 
+                <div style="font-size:12px">{dede:global name='cfg_powerby'/}
+                <a href="http://www.miibeian.gov.cn/">{dede:global name='cfg_beian'/}</a>              
+            </div> 
+		Powered by <a href="http://www.dedecms.com/" target="_blank">DedeCms {dede:global name='cfg_version'/}</a> &copy;2004-2008  <a href="http://www.desdev.cn/" target="_blank">DesDev Inc.</a><br />
+	</div>
+	<div class="floatclear"></div>
+</div>
+</body>
+</html>

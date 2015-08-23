@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="all" name="robots" />
+<meta content="{dede:field name='description' function='html2text(@me)'/}" name="description" />
+<meta content="{dede:field name='keywords'/}" name="keywords" />
+<link href='/images/news_style.css' rel='stylesheet' type='text/css'>
+<link href='http://shy.homebjjj.com/images/common.css' rel='stylesheet' type='text/css'>
+<title>{dede:field name='title'/} - {dede:global name='cfg_webname'/}</title>
+</head>
+<body>
+<!--#include virtual="/include/headershy.html" -->
+	<div class="lml">
+	<div class="pag_txt">{dede:field name='position'/}{dede:field name="title"/}</div>
+	<div class="d_top"></div>
+	<div class="l2">
+	<div class="pag_txt2">{dede:field name="title"/}</div>
+	<div class="pag_ti"></div>
+	<div class="pag_txt3"><strong>来源：</strong>{dede:field name='source'/}<strong>作者：</strong>{dede:field name='writer' /}<strong>时间：</strong>{dede:field name='pubdate' orderby=pubdate function=strftime('%Y-%m-%d')/}</div>
+	<div class="pag_list">
+        {dede:field name='body'/}<br />
+	{dede:pagetitle style='select'/}
+        
+	</div>
+	<div class="pag_txt4">{dede:pagebreak/}</div>
+	<div class="pag_txt5 l4">
+		<div class="pag_txt6">相关文章</div>
+		<div class="pag_txt7">
+                {dede:likeart titlelen='60' row='7'}
+                	[field:textlink/]<br />
+                    {/dede:likeart}
+                </div>
+	</div>
+	<div class="pag_txt8">{dede:prenext get='next'/} 
+</div>
+	</div>
+	<div class="d_bot"></div>
+	<div class="lt l4">
+	<div class="lmr_at"><div class="lmtxt">装修图库</div></div>
+	<div class="lt pag_img">
+        {dede:arclist row=10 titlelen=12 orderby=rand typeid=18 }
+<li>[field:imglink/]<br />[field:textlink/]</li>
+{/dede:arclist}
+
+        </div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="lmr lp">
+	<!--#include virtual="/include/right.php" -->
+<div class="l4 lmr_a lt">
+	<div class="lmr_at"><div class="lmr_atxt">论坛推荐</div><div class="txt_r">><a href="http://bbs.homebjjj.com">更多</a></div></div>
+	<div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.homebjjj.com/api/javascript.php?key=threads_dhI"></script>
+</div>
+	</div>
+	<div class="l4 lmr_b lt">
+	<div class="lmr_at"><div class="lmr_atxt">论坛热帖</div><div class="txt_r">><a href="http://bbs.homebjjj.com">更多</a></div></div>
+	<div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.homebjjj.com/api/javascript.php?key=threads_hot"></script>
+</div>
+	</div>
+
+</div>
+
+<div class="clear"></div>
+</div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

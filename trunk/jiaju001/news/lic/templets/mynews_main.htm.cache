@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("datalist","\r\n  <tr align=\"center\" height=\"26\" bgcolor=\"#FFFFFF\" onMouseMove=\"javascript:this.bgColor='#F3F7EA';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\"> \r\n    <td width=\"8%\">[field:aid/]</td>\r\n    <td width=\"30%\">[field:title /]</td>\r\n    <td width=\"16%\">[field:typename /]</td>\r\n    <td width=\"14%\">[field:senddate function=\"GetDateMk('@me')\" /]</td>\r\n    <td width=\"16%\">[field:writer /]</td>\r\n    <td width=\"16%\">\r\n	<a href='mynews_edit.php?aid=[field:aid /]'>[修改]</a>\r\n	<a href='mynews_edit.php?dopost=del&aid=[field:aid /]'>[删除]</a>\r\n	</td>\r\n  </tr>\r\n  ",1359,1954);
+$z[2]=Array("pagelist","",2037,2064);
+$z[2][4]['listsize']="6";
+
+?>

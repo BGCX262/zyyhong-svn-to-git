@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("datalist","<tr align=\"center\"> \r\n        <td>[field:aid /]</td>\r\n        <td><a href=\"[field:global name='cfg_cmspath'/]/[field:filename/]\" target='_blank'>[field:title \r\n    /]</a></td>\r\n        <td>[field:ismake function='GetIsMake(\"@me\")'/]</td>\r\n        <td>[field:uptime function='GetDateTimeMk(@me)'/]</td>\r\n        <td><a href='templets_one_edit.php?aid=[field:aid /]&dopost=edit'>[更改]</a> \r\n      <a href='templets_one_edit.php?aid=[field:aid /]&dopost=make' target='_blank'>[更新]</a> \r\n    <a href='templets_one_edit.php?aid=[field:aid /]&dopost=delete'>[删除]</a> </td>\r\n     </tr>\r\n     ",1473,2100);
+$z[2]=Array("pagelist","",2838,2865);
+$z[2][4]['listsize']="6";
+
+?>

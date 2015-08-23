@@ -1,0 +1,13 @@
+<?PHP exit;?>	1259641566	MySQL	202.160.179.60|202.160.179.60	viewthread.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1259734285	MySQL	114.249.246.27|114.249.246.27	viewthread.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1259907927	MySQL	123.113.159.195|123.113.159.195	forumdisplay.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260015461	MySQL	67.218.116.134|67.218.116.134	redirect.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260160428	MySQL	61.135.249.210|61.135.249.210	redirect.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260324639	MySQL	113.224.67.254|113.224.67.254	viewthread.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260415609	MySQL	220.181.94.234|220.181.94.234	index.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260508519	MySQL	202.160.179.211|202.160.179.211	redirect.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260694197	MySQL	61.135.249.210|61.135.249.210	viewthread.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260783729	MySQL	|124.42.90.196	javascript.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260882425	MySQL	220.181.94.222|220.181.94.222	viewthread.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1260973195	MySQL	203.208.60.200|203.208.60.200	redirect.php : Can't connect to MySQL server on 'localhost' (10061) -
+<?PHP exit;?>	1261732622	MySQL	127.0.0.1|127.0.0.1	index.php : Can't connect to MySQL server on 'localhost' (10061) -

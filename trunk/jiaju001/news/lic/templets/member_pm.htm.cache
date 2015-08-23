@@ -1,0 +1,14 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("global","",1227,1256);
+$z[1][4]['name']="keyword";
+$z[2]=Array("global","",1437,1467);
+$z[2][4]['name']="username";
+$z[3]=Array("global","",2691,2721);
+$z[3][4]['name']="postuser";
+$z[4]=Array("datalist","\r\n  <tr height=\"26\" align=\"center\" bgcolor=\"#FFFFFF\" onMouseMove=\"javascript:this.bgColor='#EDF7D0';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\">\r\n    <td>\r\n	[field:dateline function=\"GetDateMk('@me')\"/]</td>\r\n    <td> [field:subject function='htmlspecialchars(@me)'/]<br></td>\r\n    <td>[field:new function='IsReader(@me)'/]</td>\r\n    <td> [field:msgfrom /] </td>\r\n    <td title=\"[field: message function='htmlspecialchars(@me)'/]\">[field: message function='cn_substr(htmlspecialchars(@me),60)'/]</td>\r\n    <td>[field:folder function=\"GetFolders('@me')\"/]</td>\r\n    <td>\r\n	<table width=\"98%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n        <tr>\r\n          <td align=\"center\" height=\"25\"><a href=\"member_pm.php?ID=[field:pmid/]&dopost=del\">删除</a></td>\r\n        </tr>\r\n      </table></td>\r\n  </tr>\r\n  ",2885,3729);
+$z[5]=Array("pagelist","",3823,3850);
+$z[5][4]['listsize']="6";
+
+?>

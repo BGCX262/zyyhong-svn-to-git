@@ -1,0 +1,9 @@
+<?php
+$z[0]=Array("global","",1063,1095);
+$z[0][4]['name']="activepath";
+$z[1]=Array("global","",1558,1590);
+$z[1][4]['name']="activepath";
+$z[2]=Array("global","",1608,1640);
+$z[2][4]['name']="activepath";
+
+?>

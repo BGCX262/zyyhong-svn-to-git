@@ -1,0 +1,86 @@
+<a href="/member/index.php?uid=<?php echo $uid?>">公司首页</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=cominfo">公司简介</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=culture">企业文化</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=news">公司新闻</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=info">供求信息</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=product">产品展示</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=job">人才招聘</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=guestbook">在线留言</a>
+<a href="/member/index.php?uid=<?php echo $uid?>&type=contact">联系我们</a>
+
+<br><br>
+企业简介：
+<?php echo $cominfo['cominfo']?>
+
+<br><br>
+企业文化：
+<?php echo $cominfo['culture']?>
+
+<br><br>
+公司新闻：
+<?php
+if($news){
+	foreach($news as $new){
+?>
+<br><br>
+标题：<a href="<?php echo $new['arcurl']?>"><?php echo $new['title']?></a>
+
+<?php
+	}
+}
+?>
+<br><br>
+产品展示：
+<?php
+if($products){
+	foreach($products as $product){
+?>
+<br><br>
+标题：<a href="<?php echo $product['arcurl']?>"><?php echo $product['title']?></a>
+<br><br>
+缩略图：<img src="<?php echo $product['litpic']?>">
+<?php
+	}
+}
+?>
+
+
+<br><br>
+供求信息：
+<?php
+if($infos){
+	foreach($infos as $info){
+?>
+<br><br>
+标题：<a href="<?php echo $info['arcurl']?>"><?php echo $info['title']?></a>
+<br><br>
+缩略图：<img src="<?php echo $info['litpic']?>">
+<?php
+	}
+}
+?>
+
+<br><br>
+人才招聘：
+<?php
+if($jobs){
+	foreach($jobs as $job){
+?>
+<br><br>
+标题：<a href="<?php echo $job['arcurl']?>"><?php echo $job['job']?></a>
+<?php
+	}
+}
+?>
+
+<br><br>
+联系我们：<br><br>
+公司名称：<?php echo $cominfo['comname']?><br>
+地址：<?php echo $cominfo['comaddr']?><br>
+联系人：<?php echo $cominfo['truename']?><br>
+电话：<?php echo $cominfo['phone']?><br>
+传真：<?php echo $cominfo['fax']?><br>
+手机：<?php echo $cominfo['mobi']?><br>
+注册时间：<?php echo $cominfo['regyear']?><br>
+注册地：<?php echo $cominfo['regaddr']?><br>
+邮编：<?php echo $cominfo['postid']?><br>

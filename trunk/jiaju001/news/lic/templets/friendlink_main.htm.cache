@@ -1,0 +1,12 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("global","",1510,1547);
+$z[1][4]['name']="cfg_plus_dir";
+$z[2]=Array("global","",1748,1779);
+$z[2][4]['name']="seloption";
+$z[3]=Array("datalist","\r\n        <tr align=\"center\" bgcolor=\"#FFFFFF\" height=\"24\" onMouseMove=\"javascript:this.bgColor='#EFEFEF';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\"> \r\n          <td><input type='checkbox' name='aids' value='[field:ID/]' class='np'></td>\r\n          <td><a href=\"[field:url/]\" target='_blank'>[field:webname/]</a></td>\r\n          <td><a href=\"[field:url/]\" target='_blank'>[field:logo function=\"GetPic('@me')\"/]</a></td>\r\n          <td>[field:email/]</td>\r\n          <td>[field:dtime/]</td>\r\n          <td>[field:ischeck function=\"GetSta('@me')\"/]</td>\r\n          <td>[field:sortrank/]</td>\r\n          <td>\r\n          	<a href='friendlink_edit.php?ID=[field:ID/]&dopost=getedit'>[更改]</a>\r\n		        <a href='friendlink_edit.php?ID=[field:ID/]&dopost=delete'>[删除]</a>\r\n		      </td>\r\n        </tr>\r\n		",2676,3521);
+$z[4]=Array("pagelist","",3980,4007);
+$z[4][4]['listsize']="6";
+
+?>

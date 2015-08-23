@@ -1,0 +1,15 @@
+
+# Contact info submission
+
+url:http://www.jiaju001.com 
+site_owner: Homebjjj.com
+address1: Dongchengqu Dongzhongbu hutong 5
+address2: 
+city: Beijing
+state: China
+country: Beijing
+postal_code: 
+phone_number:010-65120443 
+display_email: zyhylys@263.net
+site_name: 北京家居网
+site_description:北京家居网,家居建材类电子商务网站（B2C）,提供最精湛的家居建材消费咨询和导购服务,提供最专业的家居资讯。

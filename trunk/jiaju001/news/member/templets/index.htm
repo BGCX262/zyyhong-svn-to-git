@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>空间聚集</title>
+<link href="css/style-index.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../include/dedeajax2.js"></script>
+<script type="text/javascript">
+function SetSubmit()
+{ 
+	 var _keyword = document.getElementById("keyword");
+	 var _tpye = document.getElementById("searchtype");
+	 if(_tpye.value=="info"){ _keyword.name = "q"; document.Searchpools.action = "../plus/infosearch.php"; }
+	 else if(_tpye.value=="book"){ _keyword.name = "keyword";document.Searchpools.action = "../book/search.php"; }
+	 else if(_tpye.value=="topic"){_keyword.name = "keyword"; document.Searchpools.action = "../group/search.php"; }
+	 else if(_tpye.value=="company"){ _keyword.name = "comname"; document.Searchpools.action = "../company/search.php"; }
+	 else if(_tpye.value=="ask"){ _keyword.name = "q"; document.Searchpools.action = "../ask/search.php"; }
+	 else if(_tpye.value=="art") { _keyword.name = "keyword";document.Searchpools.action = "../plus/search.php";}
+	 document.Searchpools.submit();
+}
+function CheckLogin()
+{
+  var taget_obj = document.getElementById('_loginform');
+  myajax = new DedeAjax(taget_obj,false,false,"","","");
+  myajax.SendGet2("loginsta.php");
+  DedeXHTTP = null;
+}
+</script>
+</head>
+
+<body onload="CheckLogin()">
+<div id="container">
+<!-- 头部开始 -->
+	<div id="header">
+    	<div id="dzh_header">
+        	<div id="dzh_logo">
+            </div>
+            <div id="dzh_toptext">
+            <?php
+            if(!$cfg_ml->IsLogin()){
+            ?>
+            您好，请先 <a href="login.php?gourl=<?php echo urlencode(GetCurUrl());?>">登录</a> 或 <a href="index_do.php?fmdo=user&dopost=regnew">注册</a>
+            <?php
+            }else{
+            ?>
+            您好，<?php echo $cfg_ml->M_UserName; ?> 欢迎登录，你的级别：<?php echo $Honor; ?> | <a href="control.php">控制面板</a> | <a href="index_do.php?fmdo=login&dopost=exit">退出登录</a>
+            <?php
+            }
+            ?>            
+          </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="dzh_menu">
+        	<ul>
+            <li class="dzh_index"><a href="<?php echo $cfg_indexurl;?>">首页</a></li>
+            <li class="dzh_class"><a href="../plus/goinfos.php">分类信息</a></li>
+            <li class="dzh_group"><a href="../group/">圈子系统</a></li>
+            <li class="dzh_ask"><a href="../ask/">问答频道</a></li>
+            <li class="dzh_book"><a href="../book/">小说频道</a></li>
+            <li class="dzh_yp"><a href="../company/">企业黄页</a></li>
+            </ul>
+            <div class="clear">
+            </div>
+        </div>
+        <form action="" method="get" name="Searchpools" id="Searchpools" onSubmit="javascript:SetSubmit();">
+        <div class="dzh_search">
+        	<div class="dzh_search_left">
+            </div>
+            <div class="dzh_search_text">搜索：
+            
+            <input name="keyword" id="keyword" type="text" class="dzh_searchtxt" />
+            <select id="searchtype">
+            <option value="art" selected>文章内容</option>
+          	<option value="info">分类信息</option>
+          	<option value="book">小说</option>
+            <option value="topic">圈子贴子</option>
+            <option value="company">公司企业</option>
+            <option value="ask">帮助答案</option>
+        	</select>
+            <input type="submit" value="" class="search_button" />
+            
+            </div>
+            <div class="dzh_search_right">
+            </div>
+      </div>
+      </form>
+      <div class="clear">
+        </div>
+    </div>
+<!-- 头部结束 -->
+<!--中部开始-->
+	<div id="dzh_main">
+    	<div id="dzh_maincnter">
+        	<div id="dzh_left"><!--左边开始-->
+            	<div class="dzh_login"><!--登录开始-->
+                	<div class="dzh_login_title">
+                    	<ul>
+                        <li><?php if(!$cfg_ml->IsLogin()){ ?>会员登录 <?php }else{?><?php echo $cfg_ml->M_UserName;?>,您好！<?php } ?></li>
+                        </ul>
+                    </div>
+                    <div class="dzh_login_form">
+                    <span id='_loginform'>
+                    <form name='form1' method='POST' action='index_do.php'>
+                    <input type="hidden" name="fmdo" value="login">
+        			<input type="hidden" name="dopost" value="login">
+        			<input type="hidden" name="gourl" value="<?php if(!empty($gourl)) echo $gourl;?>">
+                    	<dl>
+                        <dd class="dzh_name">用户名：</dd>
+                        <dd class="dzh_formlabel"><input name="userid" type="text" class="dzh_label" /></dd>
+                        <dd class="dzh_name">密  码：</dd>
+                        <dd class="dzh_formlabel"><input name="pwd" type="password" class="dzh_label" /></dd>
+                        <dd class="dzh_name">验证码：</dd>
+                        <dd class="dzh_formlabel1"><input name="vdcode" type="text" class="dzh_label1" /></dd>
+                        <dd class="dzh_formlabel1"><img src="../include/vdimgck.php" /></dd>
+                        <dd class="dzh_name"><input type="submit" value="登 录" class="dzh_loginbutton" /></dd>
+                        </dl>
+                        <div class="clear">
+                        </div>
+                    </form>
+                    </span>
+                    </div>
+                    <div class="clear">
+                	</div>
+                </div><!--登录结束-->
+                <div class="dzh_memberlist"><!--会员排行-->
+                	<div class="dzh_membertitle">会员排行
+                    </div>
+                    <div class="rbox paihang">
+							<dl>
+                            <?php
+                            foreach($topmember as $k=>$rs){
+                            ?>
+							<dd><span class="name"><a href="?<?php echo $rs['userid'];?>/" target="_blank"><?php echo $rs['uname'];?></a></span></dd>
+                            <?php } ?>
+							</dl>
+					</div>
+                </div><!--会员排行结束-->
+                <div class="dzh_memberlist"><!--新加入企业-->
+                	<div class="dzh_companytitle">新加入企业
+                    </div>
+                    <div class="rbox paihang">
+							<dl>
+                            <?php foreach($newcompanys as $k=>$rs){ ?>
+							<dd><span class="name"><a href="?<?php echo $rs['userid'];?>/" target="_blank"><?php echo $rs['comname'];?></a></span></dd>
+                            <?php } ?>
+							</dl>
+					</div>
+                </div><!--新加入企业结束-->
+                <div class="dzh_grouplist"><!--圈子排行开始-->
+                	<div class="dzh_grouptitle">圈子排行
+                    </div>
+                    <div class="rbox1 paihang1">
+							<dl>
+                            <?php
+                            if(isset($topgroups) && is_array($topgroups)){
+                            foreach($topgroups as $k=>$rs){
+                            ?>
+							<dd><span class="name"><a href="../group/group.php?id=<?php echo $rs['groupid'];?>" target="_blank"><?php echo $rs['groupname'];?></a></span></dd>
+                          <?php }} ?>
+							</dl>
+					</div>
+                </div><!--圈子排行结束-->
+                <div class="clear">
+                </div>
+            </div><!--左边结束-->
+            
+            <div id="dzh_right"><!--右边开始-->
+            	<div class="dzh_rightform"><!--第一排外框开始-->
+                    <div class="dzh_hottopic"><!--热门帖子开始-->
+                        <ul>
+                        <li>热门帖子</li>
+                        </ul>
+                        <dl>
+                        <?php
+                        if(isset($topics) && is_array($topics)){
+                        if(!isset($titleleft)) $titleleft = '';
+                        foreach($topics as $k=>$rs){                        
+                        $title = $rs['subject'];                     
+                        if($rs['digest']) $titleleft .= " [<font color=\"red\">精华</font>]";
+                        if($rs['replies']>10) $titleleft .= "[<font color=\"red\">热门</font>]";
+                        $title = $titleleft.$title;
+                        $titleleft = "";
+                        ?>
+                        <dd><a href="../group/viewthread.php?id=<?php echo $rs['gid'];?>&tid=<?php echo $rs['tid'];?>" title="<?php echo $rs['subject'];?>" target="_blank"><?php echo $title;?></a></dd>
+                        <?php
+                         }}
+                        ?>
+                        </dl>
+                    </div><!--热门帖子结束-->
+                    <div class="dzh_asktopic"><!--最新问答开始-->
+                        <ul>
+                        <li>最新问答</li>
+                        </ul>
+                        <dl>
+                        <?php
+                        if(isset($newask) && is_array($books)){
+                        foreach($newask as $k=>$rs){
+                        $status = "<span>未解决</span>";
+                        if($rs['status']) $status = "已解决";                        
+                        ?>
+                        <dd class="dzh_asktp"><a href="../ask/question.php?id=<?php echo $rs['id'];?>" target="_blank"><?php echo $rs['title'];?></a></dd>
+                        <dd class="dzh_askaa"><?php echo $status;?></dd>
+                        <?php }} ?>
+                        </dl>
+                        <div class="clear">
+                        </div>
+                    </div><!--最新问答结束-->
+                    <div class="clear">
+                    </div>
+                </div><!--第一排外框结束-->
+                
+                
+                <div class="dzh_rightform"><!--第二排外框开始-->
+                    <div class="dzh_mainbook"><span>热门文章</span>
+                    	<ul>
+                        <?php
+                        foreach($hotarchives as $k=>$rs){                        	
+                            if(!empty($rs['color']))  $title = "<font color='".$rs['color']."'>".$rs['title']."</font>";
+                            else $title = $rs['title'];
+                        ?>
+                        <li><a href="../plus/view.php?aid=<?php echo $rs['ID'];?>&tid=<?php echo $rs['typeid'];?>" target="_blank"><?php echo $title;?></a></li>
+                        <?php } ?>
+                        </ul>
+                    </div>
+                    <div class="dzh_article"><span>最新文章</span><!--最新文章开始-->
+                    	<ul>
+                        <?php
+                        foreach($newarchives as $k=>$rs){                        	
+                            if(!empty($rs['color']))  $title = "<font color='".$rs['color']."'>".$rs['title']."</font>";
+                            else $title = $rs['title'];
+                        ?>
+                        <li><a href="../plus/view.php?aid=<?php echo $rs['ID'];?>&tid=<?php echo $rs['typeid'];?>" target="_blank"><?php echo $title;?></a></li>
+                        <?php } ?>
+
+                        </ul>
+                        <div class="clear">
+                        </div>
+                    </div><!--最新文章结束-->
+                </div><!--第二排外框结束-->
+                
+                
+                <div id="dzh_photo"><!--最新图集-->
+                	<ul>
+                    <li>最新图集</li>
+                    </ul>
+                    <?php
+                    foreach($pics as $k=>$rs){                        	
+                    ?>
+                    <div class="dzh_photoimg">
+                        <dl>
+                        <dd class="dzhright"><a href="../plus/view.php?aid=<?php echo $rs['ID'];?>&tid=<?php echo $rs['typeid'];?>" target="_blank"><img src="<?php echo $rs['litpic'];?>" width="100" height="70" border="0" /></a></dd>
+                        <dd class="dzhcenter"><a href="../plus/view.php?aid=<?php echo $rs['ID'];?>&tid=<?php echo $rs['typeid'];?>" target="_blank"><?php echo $rs['title'];?></a></dd>
+                        </dl>
+                    </div>
+                    <?php } ?>
+                    <div class="clear">
+                    </div>
+                </div><!--最新图集结束-->
+                <div class="dzh_rightform"><!--第四排外框开始-->
+                    <div class="dzh_mainbook"><span>分类信息</span><!--分类信息开始-->
+                    	<ul>
+                        <?php
+                        foreach($infos as $k=>$rs){                        	
+                            if(!empty($rs['color']))  $title = "<font color='".$rs['color']."'>".$rs['title']."</font>";
+                            else $title = $rs['title'];
+                        ?>
+                        <li><a href="../plus/view.php?aid=<?php echo $rs['ID'];?>&tid=<?php echo $rs['typeid'];?>" target="_blank"><?php echo $title;?></a></li>
+                        <?php } ?>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                    </div><!--分类信息结束-->
+                    <div class="dzh_article"><span>最新连载</span><!--分类信息开始-->
+                    	<ul>
+                        <?php
+                        if(isset($books) && is_array($books)){
+                        foreach($books as $k=>$rs){ 
+                        ?>
+                        <li><a href="<?php echo GetBookUrl2($rs['id'],$rs['bookname']);?>" target="_blank"><?php echo $rs['bookname'];?></a></li>
+                      <?php }} ?>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                    </div><!--最新连载结束-->
+                    <div class="clear">
+                    </div>
+                </div><!--第四排外框结束-->
+                <div class="clear">
+                </div>
+            </div><!--右边结束-->
+            <div class="clear">
+            </div>
+            
+            <div id="dzh_footer"><!--底部开始-->
+            	<div id="dzh_footer_form">
+                	<ul><li><?php echo $cfg_powerby?></li></ul>
+                </div>
+                <div class="clear">
+                </div>
+            </div><!--底部结束-->
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+<!--中间结束-->
+
+
+</div>
+</body>
+</html>

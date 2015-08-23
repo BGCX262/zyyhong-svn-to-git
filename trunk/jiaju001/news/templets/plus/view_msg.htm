@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $arctitle?> - powered by dedecms</title>
+<link href="../templets/style/dede.css" rel="stylesheet" type="text/css" />
+<link href="../templets/style/spage.css" rel="stylesheet" type="text/css" />
+</head>
+</head>
+<body>
+
+<div class="stop"><span class="toplink"><a href="/">返回主页</a></span></div>
+
+<div class="smain">
+	<div class="mtitle">
+		<div class="mtname">提示信息：<?php echo $msgtitle?></div>
+	</div>
+	<div class="mbox">
+		<div class="flbox">
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="29"><?php echo $moremsg?></td>
+            </tr>
+            <tr>
+              <td height="99" valign="top"><table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="#DDEAC8">
+                <tr bgcolor="#EFF4EA">
+                    <td width="17%" height="20" align="center">文档标题：</td>
+                    <td width="83%" height="20"><?php echo $arctitle?></td>
+                </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td height="20" align="center" bgcolor="#FFFFFF">发布时间：</td>
+                    <td height="20"><?php echo $pubdate?></td>
+                </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td height="70" align="center" bgcolor="#FFFFFF">文档简介：</td>
+                    <td><?php echo $description?></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30" bgcolor="#F9F9EE">&nbsp;返回页面： <a href="<?php echo $cfg_member_dir?>/"><u>会员主页</u></a> <a href='javascript:history.go(-1)'><u>上一页</u></a> </td>
+            </tr>
+          </table>
+		</div>		
+	</div>
+</div>
+
+
+</body>
+</html>

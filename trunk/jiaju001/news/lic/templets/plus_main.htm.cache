@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="50";
+$z[1]=Array("datalist","\r\n    <tr align=\"center\" bgcolor=\"#FFFFFF\" height=\"24\" onMouseMove=\"javascript:this.bgColor='#EFEFEF';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\"> \r\n        <td>[field:aid /]</td>\r\n        <td>[field:plusname /]</td>\r\n        <td>[field:writer /]</td>\r\n        <td>[field:isshow function='GetSta(@me,\$GLOBALS{\"row\"}{\"aid\"},\$GLOBALS{\"row\"}{\"plusname\"})'/]</td>\r\n     </tr>\r\n		",1172,1584);
+$z[2]=Array("pagelist","",1665,1692);
+$z[2][4]['listsize']="6";
+
+?>

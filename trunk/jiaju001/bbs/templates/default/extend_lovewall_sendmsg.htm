@@ -1,0 +1,309 @@
+<link rel="stylesheet" type="text/css" href="extend/lovewall/sendlove.css" />
+<SCRIPT language="javascript" type=text/javascript>
+var re;
+var smilies = new Array();
+<!--{if !empty($GLOBALS['_DCACHE']['smilies']) && is_array($GLOBALS['_DCACHE']['smilies'])}-->
+	<!--{loop $_DCACHE['smilies_display'] $key $smiley}-->
+	<!--{eval $smiley[code]=addcslashes($smiley['code'], '\\\'');}-->
+		smilies[$key]			= {'code' : '$smiley[code]', 'url' : '$smiley[url]'};
+	<!--{/loop}-->
+<!--{/if}-->
+//修改背景颜色函数
+function ColorChoose(n)
+{
+	var ClassName = "Style"+n;
+	document.getElementById("Message").firstChild.setAttribute("class",ClassName);
+	document.getElementById("Message").firstChild.setAttribute("className",ClassName);
+	MakeMessage.scolor.value = n;
+	document.getElementsByName("TextColor")[n].checked = true;
+}
+function addslashes(str) {
+	return preg_replace(['\\\\', '\\\'', '\\\/', '\\\(', '\\\)', '\\\[', '\\\]', '\\\{', '\\\}', '\\\^', '\\\$', '\\\?', '\\\.', '\\\*', '\\\+', '\\\|'], ['\\\\', '\\\'', '\\/', '\\(', '\\)', '\\[', '\\]', '\\{', '\\}', '\\^', '\\$', '\\?', '\\.', '\\*', '\\+', '\\|'], str);
+}
+function preg_replace(search, replace, str) {
+	var len = search.length;
+	for(var i = 0; i < len; i++) {
+		re = new RegExp(search[i], "ig");
+		str = str.replace(re, typeof replace == 'string' ? replace : (replace[i] ? replace[i] : replace[0]));
+	}
+	return str;
+}
+function MessagelChange(Input){
+	var c = Input.value;
+	var show = c;
+	
+	var pattern1 = /\[em\]/g ;
+	var pattern2 = /\[\/em\]/g ;
+	for(id in smilies) {
+		re = new RegExp(addslashes(smilies[id]["code"]), "g");
+		show = show.replace(re, '<img src="./images/smilies/' + smilies[id]['url'] + '" border="0" smilieid="' + id + '" alt="' + smilies[id]['code'] + '" />');
+	}
+	show = show.replace(pattern1,"<img src='http://imgcache.qq.com/qzone/em/e");
+	show = show.replace(pattern2,".gif'>");
+
+	var pattern3 = /\[em\]\d{1,2}\[\/em\]/g
+	var em = c.match(pattern3);
+	var realValue = c.replace(pattern3,"表情");
+	var d = realValue.length; 
+	var e = new RegExp("\n", "gm");
+	var f = c.match(e);
+	var g = 0;
+	var h = document.getElementById("AreaText").innerHTML;
+	var n = document.getElementById("Char").innerHTML;
+	var i = 0;
+	if (f)
+	{
+		g = f.length;
+	}
+	if (g > 3){	
+		d = d + (g * 6);
+		Input.value = document.getElementById("store").value;
+	}else{	
+		d = d + (g * 6);
+		if (d<71)
+		{
+			document.getElementById("AreaText").innerHTML = show;
+			document.getElementById("Char").innerHTML = 90 - d;
+		}
+		else
+		{
+			//alert("对不起，输入祝福纸条的字数超出90个字符！");
+			i = 90 - (g * 6);
+			if(em){
+				i += em.length*9;
+				var tmp = c.substring(i-9,c.length);
+				var tmpem = tmp.match(pattern3);
+				if(tmpem)
+					i -= tmpem.length*9;
+			}
+			c = c.substring(0,i);
+			h = c;
+			document.getElementById("MyMessage").value = c;
+			document.getElementById("Char").innerHTML = "0";
+		}
+		document.getElementById("store").value = c;
+	}
+	
+}
+function IconChange(n){
+	var IconUrl = "extend/lovewall/icon_"+n+".gif";
+	document.getElementById("IconImg").src = IconUrl;
+	MakeMessage.smood.value = n;
+	document.getElementsByName("Icon")[n].checked = true;
+}
+//标签菜单
+function Face(AttrStr){
+	var ObjFacelist = document.getElementById("FaceList");
+	ObjFacelist.style.cssText = "display:"+AttrStr+";";
+	ObjFacelist.setAttribute("style","display:"+AttrStr+";");
+}
+//称呼落款输入
+function InputName(OriInput, GoalArea){
+	document.getElementById(GoalArea).innerHTML = OriInput.value;
+}
+
+function appEmotionStr(smid) {
+		document.getElementById("MyMessage").value += smilies[smid]['code'];
+		Face("none");
+		MessagelChange(document.getElementById("MyMessage"));
+}
+
+function beforeSubmit() {
+	var nick = document.getElementById("nick").value;
+	var recvnick = document.getElementById("recvnick").value;
+	var MyMessage = document.getElementById("MyMessage").value;
+	if(MyMessage == ""){
+		alert("字条内容必填！");
+		document.getElementById("MyMessage").focus();
+		return false;
+	}
+	if(nick == "")
+		document.getElementById("nick").value = "$discuz_userss";
+	return true;
+}
+function init() {
+	var colors = document.getElementsByName("TextColor");
+	var icons = document.getElementsByName("Icon");
+	for(var i = 0; i < colors.length;i++) {
+		if(colors[i].checked) {
+			ColorChoose(i);
+			break;
+		}		
+	}
+	for(var j = 0; j < icons.length;j++) {
+		if(icons[j].checked){
+			IconChange(j);
+			break;
+		}		
+	}
+	InputName(document.getElementById("nick"),'Sign')
+	InputName(document.getElementById("recvnick"),'Head')
+	//MessagelChange(document.getElementById("MyMessage"));
+}
+function Tip(ID,Attr){
+	document.getElementById(ID).style.display = Attr;
+}
+function searchMsg() {
+	var noStr = document.getElementById("scripNo").value;
+	var no = parseInt(noStr);
+	if(isNaN(no)  || toInt(noStr)== -1){
+		alert("纸条编号必须为数字");
+		return;
+	}else if(no < 1){
+		alert("纸条编号必须为正整数");
+		return;
+	}else{
+		window.location.href = "index.jsp?no="+no;
+	}
+}
+function toInt(str){
+	var ret=0;
+	var mid_num;
+	for(var i=0;i<str.length;i++) {
+		mid_num=str.charAt(i);
+		if(mid_num<'0' || mid_num>'9') {
+			return -1;
+		}
+		ret=ret*10+(mid_num-'0');
+	}
+	return ret;
+}
+function addLoadEvent(func) {	
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function'){
+    	window.onload = func;
+	} else {
+		window.onload = function(){
+			oldonload();
+			func();
+		}
+	}
+}
+addLoadEvent(init);
+</SCRIPT>
+
+<DIV id=DIY>
+<table width="946" border="0" align="center"><tr><td>
+<DIV id=Step>
+<DIV id=StepDetail>
+<TABLE id=StepTable cellSpacing=1 cellPadding=0 width="100%" border=0>
+<FORM name=MakeMessage onsubmit="return beforeSubmit();" method="post" action="lovewall.php?index=sendmsg">
+<INPUT type=hidden value=5 name=scolor>
+<INPUT type=hidden value=5 name=smood>
+<INPUT type=hidden value=nihao=nihao name=dd>
+  <TBODY>
+  <TR>
+    <TH>对方昵称：</TH>
+    <TD><INPUT id=store type=hidden maxLength=6>
+	<INPUT id=recvnick onkeyup="javascript:InputName(this,'loveHead')" maxLength=8 size=13 name=recvnick></TD></TR>
+  <TR>
+    <TH>我的昵称：</TH>
+    <TD><INPUT id=nick onkeyup="javascript:InputName(this,'loveSign')" onclick="if(this.value =='$discuz_userss') this.value=''; " maxLength=6 size=13 value=$discuz_userss name=nick></TD></TR>
+  <TR>
+    <TH>字条内容：</TH>
+    <TD style="POSITION: relative"><TEXTAREA id=MyMessage onkeyup=javascript:MessagelChange(this); name=MyMessage onchange=javascript:MessagelChange(this)></TEXTAREA> 
+      <SPAN class=t_red>*</SPAN> 
+      <P id=Face><IMG height=20 hspace=6 src="extend/lovewall/icon_face.gif" width=22 align=absMiddle>
+	  <A class=a_green onclick="javascript:Face('block');return false;">添加表情</A><SPAN class=AR 
+      id=CharNum>还剩 <STRONG id=Char>90</STRONG> 个字</SPAN></P>
+      <DIV id=FaceListOuter>
+      <DIV id=FaceList onmouseover="javascript:Face('block')" onmouseout="javascript:Face('none')">
+<SCRIPT type=text/javascript>
+<!--{loop $_DCACHE['smilies_display'] $key $smiley}-->
+document.write("<img src='{SMDIR}/{$smiley[url]}' onclick=appEmotionStr('$key')>");
+<!--{/loop}-->
+</SCRIPT>
+      </DIV></DIV></TD></TR>
+  <TR>
+    <TH>选择字条颜色：</TH>
+    <TD>
+      <OL id=TextColorChoose>
+        <LI><INPUT class="radio" onclick="ColorChoose('0')" type=radio CHECKED 
+        name=TextColor><SPAN class=colorBlock0 
+        onclick="ColorChoose('0')">&nbsp;</SPAN> </LI>
+        <LI><INPUT class="radio" onclick="ColorChoose('1')" type=radio name=TextColor><SPAN 
+        class=colorBlock1 onclick="ColorChoose('1')">&nbsp;</SPAN> </LI>
+        <LI><INPUT class="radio" onclick="ColorChoose('2')" type=radio name=TextColor><SPAN 
+        class=colorBlock2 onclick="ColorChoose('2')">&nbsp;</SPAN> </LI>
+        <LI><INPUT class="radio" onclick="ColorChoose('3')" type=radio name=TextColor><SPAN 
+        class=colorBlock3 onclick="ColorChoose('3')">&nbsp;</SPAN> </LI>
+        <LI><INPUT class="radio" onclick="ColorChoose('4')" type=radio name=TextColor><SPAN 
+        class=colorBlock4 onclick="ColorChoose('4')">&nbsp;</SPAN> </LI>
+        <LI><INPUT class="radio" onclick="ColorChoose('5')" type=radio name=TextColor><SPAN 
+        class=colorBlock5 onclick="ColorChoose('5')">&nbsp;</SPAN> 
+</LI></OL></TD></TR>
+  <TR>
+    <TH>选择心情图案：</TH>
+    <TD>
+      <OL id=IconChoose>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(0) type=radio CHECKED 
+        name=Icon><IMG onclick="javascript:IconChange('0')" 
+        src="extend/lovewall/icon_0.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(1) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('1')" 
+        src="extend/lovewall/icon_1.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(2) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('2')" 
+        src="extend/lovewall/icon_2.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(3) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('3')" 
+        src="extend/lovewall/icon_3.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(4) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('4')" 
+        src="extend/lovewall/icon_4.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(5) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('5')" 
+        src="extend/lovewall/icon_5.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(6) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('6')" 
+        src="extend/lovewall/icon_6.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(7) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('7')" 
+        src="extend/lovewall/icon_7.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(8) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('8')" 
+        src="extend/lovewall/icon_8.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(9) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('9')" 
+        src="extend/lovewall/icon_9.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(10) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('10')" 
+        src="extend/lovewall/icon_10.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(11) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('11')" 
+        src="extend/lovewall/icon_11.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(12) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('12')" 
+        src="extend/lovewall/icon_12.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(13) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('13')" 
+        src="extend/lovewall/icon_13.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(14) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('14')" 
+        src="extend/lovewall/icon_14.gif"> </LI>
+        <LI><INPUT class="radio" onclick=javascript:IconChange(15) type=radio name=Icon><IMG 
+        onclick="javascript:IconChange('15')" 
+        src="extend/lovewall/icon_15.gif"> </LI></OL></TD></TR>
+  <TR>
+    <TH>&nbsp;</TH>
+    <TD class=t_gray6><INPUT type=image hspace=10 src="extend/lovewall/btn_next.gif" value="true" align=absMiddle name=image style="height:26px;"> 
+      +注：输入框后带 <SPAN class=t_red>*</SPAN> 的为必填内容</TD></TR></FORM></TBODY></TABLE>
+<DIV id=Peview>
+<H5>－字条预览－</H5>
+<DIV class=PeviewMessage>
+<DIV class=Message id=Message>
+<DIV class=Style0>
+<DIV class=Num>字条编号： <IMG alt=关闭 src="extend/lovewall/icon_close.gif"></DIV>
+<P class=Detail id=Detail><IMG class=Heart id=IconImg height=50 src="extend/lovewall/icon_0.gif" width=50 name=IconImg><SPAN class=Head 
+id=loveHead></SPAN><BR><SPAN id=AreaText></SPAN></P>
+<P class=Sign><SPAN id=loveSign></SPAN></P>
+<P class=Date>
+<SCRIPT>
+var ThisTime = new Date();
+document.write(ThisTime.getFullYear()+"-"+(ThisTime.getMonth()+1)+"-"+ThisTime.getDate()+" "+ThisTime.getHours()+":"+ThisTime.getMinutes()+":"+ThisTime.getSeconds()); 
+</SCRIPT>
+</P></DIV></DIV></DIV></DIV>
+<DIV style="CLEAR: both; HEIGHT: 20px"></DIV>
+<P style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 258px; COLOR: #666666; PADDING-TOP: 0px">
+<SPAN class=t_green>+注意事项</SPAN>：*  在爱墙发布祝福每条需要 $lovemoney $credits_name ，您现在有 $fduser[$lovenum] $credits_name ，如果 $credits_name 不足可发帖赚取。<br>* 请保证您发表的字条不涉及黄、赌、毒以及不良政治言论，否则，{$bbname}管理人员有权保留或删除其管辖字条中的任意内容。</P></DIV>
+</DIV></td></tr></table></DIV>

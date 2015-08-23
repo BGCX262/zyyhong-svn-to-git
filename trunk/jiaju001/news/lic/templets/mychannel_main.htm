@@ -1,0 +1,70 @@
+{dede:page pagesize="50"/}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>频道模型管理</title>
+<link href="css_body.css" rel="stylesheet" type="text/css" />
+</head>
+<body leftmargin='8' topmargin='8'>
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">频道管理</div>
+</div>
+
+<table width="96%" border="0" cellpadding="1" cellspacing="1" align="center" class="tbtitle" style="	background:#E2F5BC;">
+		<tr>
+				<td bgcolor="#EDF9D5" class="tbtitletxt">
+				  <table width='96%' border="0" cellpadding='0' cellspacing='0'>
+                  <tr>
+                    <td width='30%' class="tbtitletxt"><strong>频道模型管理</strong></td>
+                    <td align='right'>
+                    	[图片说明：
+                    	<img src='img/manage1.gif' alt='更改' />更改
+		                  <img src='img/file_del.gif' alt='删除' />删除
+                      <img src='img/copy.gif' alt='复制' />复制
+                      <img src='img/part-index.gif' alt='模板' />模板]
+                    	[<a href="mychannel_add.php"><u>增加新模型</u></a>]
+                   </td>
+                  </tr>
+         </table>
+      </td>
+  </tr>
+</table>
+			
+<table width="96%" border="0" cellpadding="1" cellspacing="1" align="center" style="margin:0px auto" class="tblist">
+		<tr align="center">
+          <td class="tbsname">ID</td>
+		  <td class="tbsname">频道名称</td>
+		  <td class="tbsname">识别ID</td>
+		  <td class="tbsname">附加表</td>
+		  <td class="tbsname">状态</td>
+		  <td class="tbsname">模型</td>
+		  <td class="tbsname">管理</td>
+  </tr>
+		   {dede:datalist}
+		  <tr align="center" bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#EFEFEF';" onMouseOut="javascript:this.bgColor='#FFFFFF';"> 
+        <td>[field:ID/]</td>
+        <td><a href='[field:mancon/]?channelid=[field:ID/]'>[field:typename/]</a></td>
+        <td>[field:nid/]</td>
+        <td>[field:addtable function="str_replace('#@__',$GLOBALS{'cfg_dbprefix'},'@me')"/]</td>
+        <td>[field:isshow function='GetSta(@me,$GLOBALS{"row"}{"ID"})'/]</td>
+        <td>[field:issystem function='IsSystem(@me)'/]</td>
+        <td>
+         <a href='mychannel_edit.php?ID=[field:ID/]&dopost=edit'><img src='img/manage1.gif' alt='更改' /></a> | 
+		     <a href='mychannel_edit.php?ID=[field:ID/]&dopost=delete'><img src='img/file_del.gif' alt='删除' /></a> |  
+         <a href='mychannel_edit.php?ID=[field:ID/]&dopost=copy'><img src='img/copy.gif' alt='复制' /></a> | 
+         <a href='mychannel_edit.php?ID=[field:ID/]&dopost=gettemplets'><img src='img/part-index.gif' alt='模板' /></a> 
+		    </td>
+     </tr>
+		   {/dede:datalist}
+</table>
+
+		
+<table width="96%" border="0" cellpadding="5" cellspacing="1" align="center" style=" border:1px solid #E2F5BC;line-height:31px;margin:auto;">
+		<tr>
+			<td height="35" align="center" style="background:#F9FFE6;padding:7px 6px 6px 10px;" >{dede:pagelist listsize=6/}</td>
+  </tr>
+</table>
+</body>
+</html>

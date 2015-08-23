@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field name='title'/} - powered by dedecms</title>
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<link href="{dede:field name='templeturl'/}/style/dede.css" rel="stylesheet" type="text/css" />
+<link href="{dede:field name='templeturl'/}/style/picture.css" rel="stylesheet" type="text/css" />
+<link href="http://www.homebjjj.com/images/common.css" rel="stylesheet" type="text/css">
+<script language='javascript'>
+	var npage = {dede:field name='nowpage'/};
+	var totalpage = {dede:field name='totalpage'/};
+	var namehand = '{dede:field name='namehand'/}';
+	var displaytype = '{dede:field name='displaytype'/}';
+	var gtimer = null;
+	//大图
+	function dPlayBig(){
+		var imgObj = document.getElementById("bigimg"+npage);
+		window.open(imgObj.src);
+	}
+	//停止幻灯
+	function dStopPlay(){
+		if(gtimer) clearTimeout(gtimer);
+		else dPlayNext();
+	}
+	//开始幻灯
+	function dStartPlay(){
+		if(npage!=totalpage){
+			gtimer = setTimeout("dPlayNext()",10000);
+		}
+	}
+	
+	//上一张
+		function dPlayPre(){
+
+
+		if(npage<2){
+			alert("这是第一页");
+		}else{
+
+			if(npage==2){
+				if(namehand!='') location.href = namehand+".shtml";
+				else location.href = "view.php?aid={dede:field name='id'/}";
+			}else if(displaytype=='st' && namehand!=''){
+				location.href = namehand+"_"+(npage-1)+".shtml";
+			}else{
+				location.href = "view.php?aid={dede:field name='id'/}&pageno="+(npage-1);
+			}
+		}
+	}
+
+	//下一张
+	function dPlayNext(){
+		if(npage==totalpage){ alert("没有了哦"); }
+		else{
+			if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+".shtml";
+			else location.href = "view.php?aid={dede:field name='id'/}&pageno="+(npage+1);
+		}
+	}
+	/*
+	window.onload=function (){	
+	  maxwidth=500;
+	  imgid = document.getElementById("ddmjj");
+	  imgid.width = (imgid.width>maxwidth ? maxwidth : imgid.width);
+  }
+  */
+</script>
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<!--内容-->
+<div class="main cbody margintop">
+	<!--左侧-->
+	<div class="pleft">
+		<!--位置导航-->
+		<div class="thisplace">
+			<div class="placenav">
+				<span>当前位置 :</span>
+				{dede:field name='position'/}
+			</div>
+		</div>
+
+		<!--标题-->
+		<div class="ctitle margintop">{dede:field name='title'/}</div>
+
+		<!--列表-->
+		
+<div class="pbox margintop">
+			{dede:field name='imgurls'/}
+		</div>
+
+		<!--分页-->
+		<div class="pages" style=" text-align:center">
+			<div class="plist">
+				{dede:pagebreak/}
+			</div>
+		</div>
+	</div>
+
+	<!--右侧-->
+	<div class="pright">
+		<!--图集信息-->
+		<div class="hotlist margintop">
+			<div class="htitle">图集信息</div>
+			<div class="hbox" id="imgbox">
+				<dl>
+					<dt><img src="{dede:field name='templeturl'/}/images/ico_15.gif" />{dede:field name='title'/}</dt>
+				  <dd><span>浏览数：</span><script src="{dede:field name='phpurl'/}/count.php?aid={dede:field name='ID'/}&mid={dede:field name='memberid'/}&view=yes" language="javascript"></script></dd>
+					<dd><span>说明：</span>{dede:field name='description'/}</dd>
+					<!--<dd><span>更新日期：</span>{dede:field name='pubdate' function='GetDateMk(@me)'/}</dd>
+					<dd><span>Tag：</span>{dede:tag type='current'/}</dd>                 	
+                    <dd>【<a href="{dede:field name='phpurl'/}/stow.php?arcID={dede:field name=ID/}">收藏</a>】 【<a href="{dede:field name='phpurl'/}/recommend.php?arcID={dede:field name=ID/}">推荐</a>】 【<a href="{dede:field name='phpurl'/}/feedback.php?arcID={dede:field name='id'/}">评论</a>】</dd>-->
+				</dl>
+			</div>
+		</div> 
+
+		<!--热门图片-->
+		<div class="hotlist margintop">
+			<div class="htitle">热点图集</div>
+			<div class="hbox" id="imgbox">
+				<ul>
+					{dede:arclist row=10 titlelen=20 orderby=click type='image.'}
+					  <li><a href="[field:arcurl/]"><span class="link">[field:title/]</span></a></li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="floatclear"><!--清除浮动--></div>
+</div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

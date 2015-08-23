@@ -1,0 +1,16 @@
+<?php
+$z[0]=Array("global","",728,785);
+$z[0][4]['name']="backurl";
+$z[0][4]['function']="urlencode(\"@me\")";
+$z[1]=Array("global","",1092,1124);
+$z[1][4]['name']="activepath";
+$z[2]=Array("global","",1397,1427);
+$z[2][4]['name']="filename";
+$z[3]=Array("global","",1634,1666);
+$z[3][4]['name']="activepath";
+$z[4]=Array("global","",1676,1706);
+$z[4][4]['name']="filename";
+$z[5]=Array("global","",1856,1889);
+$z[5][4]['name']="contentView";
+
+?>

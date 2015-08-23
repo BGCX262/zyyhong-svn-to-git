@@ -1,0 +1,15 @@
+<?PHP exit;?>	1225603951	jaejafbf	cj***bf		221.223.123.25
+<?PHP exit;?>	1225610560	ferkuoaw	cf***aw		221.223.123.25
+<?PHP exit;?>	1225760401	vuzmemtf	cv***tf		221.223.128.135
+<?PHP exit;?>	1225780261	xwgmchjd	cx***jd		221.223.128.135
+<?PHP exit;?>	1226648046	cadqxzhwv	uca***wv		221.223.122.2
+<?PHP exit;?>	1226677079	czjpbdtvh	fcz***vh		221.223.122.2
+<?PHP exit;?>	1227022728	jmljfcdy	vj***dy		222.248.1.5
+<?PHP exit;?>	1227113467	cblheqlvz	bcb***vz		221.223.131.234
+<?PHP exit;?>	1227236124	cpvvsqpok	dcp***ok		221.223.131.234
+<?PHP exit;?>	1227463404	ceihkbips	wce***ps		221.223.133.181
+<?PHP exit;?>	1227508909	czjdsmkts	ucz***ts		221.223.133.181
+<?PHP exit;?>	1227603941	cmgyqowfe	bcm***fe		123.116.110.202
+<?PHP exit;?>	1227693982	cxxrraugy	xcx***gy		123.116.110.202
+<?PHP exit;?>	1227929785	chavljpum	wch***um		61.232.7.150
+<?PHP exit;?>	1227964179	czuqtdnqi	lcz***qi		123.116.110.50

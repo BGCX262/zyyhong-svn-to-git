@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field name='title'/} - {dede:global name='cfg_webname'/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<link href="{dede:field name='templeturl'/}/style/dede.css" rel="stylesheet" type="text/css" />
+<link href="{dede:field name='templeturl'/}/style/picture.css" rel="stylesheet" type="text/css" />
+<link href="http://www.homebjjj.com/images/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<!--内容-->
+<div class="main cbody margintop">
+	<!--左侧-->
+	<div class="bleft">
+    
+    		<!--图片分类-->
+<!--		
+<div class="pclass">
+			<dl>
+				<dt>图集分类</dt>
+				<dd>
+					<ul>
+						{dede:channel type='self'}<li><a href="[field:typelink/]">[field:typename/]</a></li>{/dede:channel}
+				  </ul>
+				</dd>
+			</dl>
+		</div>
+-->
+		<!--热门图片-->
+		<div class="hotlist margintop">
+			<div class="htitle">热点图集</div>
+			<div class="hbox" id="imgbox">
+				<ul>
+					{dede:arclist row=10 titlelen=20 orderby=click type='image.'}
+					<li><a href="[field:arcurl/]"><span class="link">[field:title/]</span></a></li>
+					{/dede:arclist}
+			  </ul>
+			</div>
+		</div>
+
+        		<!--推荐图片-->
+		<div class="hotlist margintop">
+			<div class="htitle">推荐图集</div>
+			<div class="hbox" id="imgbox">
+				<ul>
+					{dede:arclist row=10 titlelen=20 type='image.commend.'}
+					<li><a href="[field:arcurl/]"><span class="link">[field:title/]</span></a></li>
+					{/dede:arclist}
+			  </ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!--右侧-->
+	<div class="bright">
+		<!--位置导航-->
+		<div class="thisplace">
+          <div class="title">{dede:field name='typename'/}</div>
+		  <div class="placenav"> <span>当前位置 :</span> {dede:field name='position'/} </div>
+	  </div>
+	  <div class="pbox margintop">
+			{dede:list pagesize='12'}
+            <dl>
+				<dt>[field:imglink/]</dt>
+				<dd class="title">[field:textlink/]</dd>
+		  </dl>
+            {/dede:list}		</div>
+
+		<!--分页-->
+		<div class="pages">
+			<div class="plist">
+				{dede:pagelist listsize='4' listitem='index pre pageno next end '/}
+			</div>
+		</div>
+
+	</div>
+
+  <div class="floatclear"><!--清除浮动--></div>
+</div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("datalist","\r\n         <tr align=\"center\" bgcolor=\"#FFFFFF\" height=\"24\" onMouseMove=\"javascript:this.bgColor='#EFEFEF';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\"> \r\n          <td>[field:aid /]</td>\r\n          <td>\r\n          	<a href='[field:global name=\"cfg_plus_dir\" /]/vote.php?aid=[field:aid/]&dopost=view' target='_blank'>\r\n          	<u>[field:votename /]</u>\r\n          	</a>\r\n          </td>\r\n          <td>[field:starttime function=\"GetDateMk('@me')\" /]</td>\r\n          <td>[field:endtime function=\"GetDateMk('@me')\" /]</td>\r\n          <td>[field:totalcount /]</td>\r\n          <td>\r\n          	<a href='vote_getcode.php?aid=[field:aid /]'>[获取代码]</a>\r\n          	<a href='vote_edit.php?aid=[field:aid /]&dopost=edit'>[更改]</a>\r\n		        &nbsp;\r\n		        <a href='vote_edit.php?aid=[field:aid /]&dopost=delete'>[删除]</a>\r\n		      </td>\r\n        </tr>\r\n		",1092,1995);
+$z[2]=Array("pagelist","",2076,2103);
+$z[2][4]['listsize']="6";
+
+?>

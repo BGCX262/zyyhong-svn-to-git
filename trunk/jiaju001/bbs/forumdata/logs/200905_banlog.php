@@ -1,0 +1,13 @@
+<?PHP exit;?>	1242034654	chefulong	1	123.113.155.42	jrt287	11	4	0	
+<?PHP exit;?>	1243307698	chefulong	1	123.113.157.237	sldmt	12	4	0	
+<?PHP exit;?>	1243404417	lic	1	123.113.157.127	sjls223	11	4	0	
+<?PHP exit;?>	1243404554	lic	1	123.113.157.127	19zhenxia	11	4	0	
+<?PHP exit;?>	1243404592	lic	1	123.113.157.127	sjsl11	11	4	0	
+<?PHP exit;?>	1243404632	lic	1	123.113.157.127	sjls6566	10	4	0	
+<?PHP exit;?>	1243404679	lic	1	123.113.157.127	lll599	10	4	0	
+<?PHP exit;?>	1243404719	lic	1	123.113.157.127	nxghj	10	4	0	
+<?PHP exit;?>	1243404781	lic	1	123.113.157.127	aiwentao	10	4	0	
+<?PHP exit;?>	1243412826	chefulong	1	123.113.157.127	jrt886	10	4	0	
+<?PHP exit;?>	1243731872	chefulong	1	123.113.159.254	sjls0202	11	4	0	
+<?PHP exit;?>	1243732016	chefulong	1	123.113.159.254	sldmt1	11	4	0	
+<?PHP exit;?>	1243732082	chefulong	1	123.113.159.254	sjls_1	11	4	0	

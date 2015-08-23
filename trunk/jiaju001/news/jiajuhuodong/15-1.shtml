@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="all" name="robots" />
+<meta content="" name="description" />
+<meta content="" name="keywords" />
+<title>家居活动 - 装修家居资讯</title>
+<link href="http://www.homebjjj.com/images/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<div class="wrap mt5">
+
+<div class="fl col_r">
+<div class="tit">| <a href='http://news.homebjjj.com/'>主页</a>-- > <a href='/jiajihuodong/'>家居活动</a>-- > 家居活动</div>
+<div class="tbox">
+<li class="r"><div class="fl ar"><a href="/jiajihuodong/200906/5952.shtml">爱尼克斯终端生饮机</a></div>2009-06-23</li><li class="r"><div class="fl ar"><a href="/jiajihuodong/200906/5950.shtml">团购送爱心——北京家居网免费送保险喽！</a></div>2009-06-19</li>
+</div><div class="tb"><div class="tbl"></div><div class="tbr"></div><div class="hack"></div></div>
+<div class="c ano">共1页/2条</div>
+</div>
+<!--#include virtual="/include/right.php" -->
+</div>
+
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

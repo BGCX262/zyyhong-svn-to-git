@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="10";
+$z[1]=Array("datalist"," \r\n    <tr bgcolor=\"#FFFFFF\" align=\"center\" onMouseMove=\"javascript:this.bgColor='#EFEFEF';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\" height=\"22\" oncontextmenu=\"ShowMenu(this,[field:nid /]);\"> \r\n      <td><input type='checkbox' name='nids' value='[field:nid /]' class='np'></td>\r\n      <td><a href='co_url.php?nid=[field:nid /]'>[field:gathername /]</a></td>\r\n      <td>[field:typename /]</td>\r\n      <td>[field:lasttime function='GetDatePage(\"@me\")' /]</td>\r\n      <td>[field:savetime function='GetDatePage(\"@me\")' /]</td>\r\n      <td>[field:language /]</td>\r\n      <td>[field:nid function='GetTJ(\"@me\")' /]</td>\r\n    </tr>\r\n    ",5222,5889);
+$z[2]=Array("pagelist","",7351,7377);
+$z[2][4]['size']="5";
+
+?>

@@ -1,0 +1,3 @@
+<!--
+document.write("·<a href='/diy/200812/5865.shtml'>去除家装遗留甲醛一些小技</a><br>");document.write("·<a href='/diy/200812/5864.shtml'>家居装饰“做旧”的小窍门</a><br>");document.write("·<a href='/diy/200812/4979.shtml'>收拾一室温情 轧花装饰带</a><br>");document.write("·<a href='/diy/200812/4978.shtml'>为居室增色：随心所欲弄花</a><br>");document.write("·<a href='/diy/200812/4977.shtml'>拿小花篮做大“文章”</a><br>");document.write("·<a href='/diy/200812/4976.shtml'>处置过时衣物有妙法 DIY一</a><br>");document.write("·<a href='/diy/200812/4975.shtml'>DIY动手时刻：永不凋零之</a><br>");document.write("·<a href='/diy/200812/4974.shtml'>“自做”家具 DIY出独一无</a><br>");
+-->

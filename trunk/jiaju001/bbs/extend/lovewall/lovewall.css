@@ -1,0 +1,347 @@
+.sbtimage {
+	border:0px;
+	margin:0px;
+	height:26px;
+	width:72px;
+}
+.sbtinput {
+	height:26px;
+	PADDING-RIGHT: 3px; 
+	PADDING-LEFT: 3px; 
+	PADDING-BOTTOM: 3px; 
+	WIDTH: 120px; 
+	COLOR: #999999; 
+	PADDING-TOP: 4px;
+}
+.Message {
+	WIDTH: 240px; CURSOR: move; COLOR: #333333; LINE-HEIGHT: 18px; POSITION: absolute; HEIGHT: 190px
+}
+.Message H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 4px 0px
+}
+.Style0 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 22px; BACKGROUND: url(./style0.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style1 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 22px; BACKGROUND: url(./style1.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style2 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 22px; BACKGROUND: url(./style2.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style3 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 22px; BACKGROUND: url(./style3.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style4 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 22px; BACKGROUND: url(./style4.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style5 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 22px; BACKGROUND: url(./style5.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style100 {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 22px; BACKGROUND: url(./style100.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 192px
+}
+.Style0 .Head {
+	COLOR: #ff3992
+}
+.Style0 .Sign {
+	MARGIN: 0px; COLOR: #ff3992;margin-right:7px; TEXT-ALIGN: right
+}
+.Style0 .Sign A {
+	COLOR: #ff3992; TEXT-DECORATION: underline
+}
+.Style0 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Style1 .Head {
+	COLOR: #cc0000
+}
+.Style1 .Sign {
+	MARGIN: 0px;margin-right:7px; COLOR: #cc0000; TEXT-ALIGN: right
+}
+.Style1 .Sign A {
+	COLOR: #cc0000; TEXT-DECORATION: underline
+}
+.Style1 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Style2 .Head {
+	COLOR: #0096eb
+}
+.Style2 .Sign {
+	MARGIN: 0px;margin-right:7px; COLOR: #0096eb; TEXT-ALIGN: right
+}
+.Style2 .Sign A {
+	COLOR: #0096eb; TEXT-DECORATION: underline
+}
+.Style2 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Style3 .Head {
+	COLOR: #00b115
+}
+.Style3 .Sign {
+	MARGIN: 0px;margin-right:7px; COLOR: #00b115; TEXT-ALIGN: right
+}
+.Style3 .Sign A {
+	COLOR: #00b115; TEXT-DECORATION: underline
+}
+.Style3 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Style4 .Head {
+	COLOR: #a800d8
+}
+.Style4 .Sign {
+	MARGIN: 0px;margin-right:7px; COLOR: #a800d8; TEXT-ALIGN: right
+}
+.Style4 .Sign A {
+	COLOR: #a800d8; TEXT-DECORATION: underline
+}
+.Style4 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Style5 .Head {
+	COLOR: #ff6600
+}
+.Style5 .Sign {
+	MARGIN: 0px;margin-right:7px; COLOR: #ff6600; TEXT-ALIGN: right
+}
+.Style5 .Sign A {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+.Style5 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Style100 .Head {
+	COLOR: #ff0000
+}
+.Style100 .Sign {
+	MARGIN: 0px 4px 0px 0px; COLOR: #ff0000; TEXT-ALIGN: right
+}
+.Style100 .Sign A {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.Style100 .Sign A:hover {
+	TEXT-DECORATION: none
+}
+.Num {
+	PADDING-LEFT: 13px; CURSOR: move
+}
+.Num IMG {
+	MARGIN-TOP: -15px;margin-right:7px; FLOAT: right; CURSOR: pointer
+}
+.Detail {
+	MARGIN: 3px -1px 0px 0px; OVERFLOW: hidden; LINE-HEIGHT: 17px; HEIGHT: 114px; WORD-WRAP: break-word
+}
+.Date {
+	FONT-SIZE: 10px; MARGIN: -1px 7px 0px; TEXT-ALIGN: right
+}
+.Paste {
+	TEXT-ALIGN: center
+}
+.Paste IMG {
+	FILTER: alpha(opacity=70); moz-opacity: 0.7; opacity: 0.7
+}
+.Heart {
+	FLOAT: left; MARGIN: 0px 4px -10px 0px
+}
+.MMessage {
+	WIDTH: 145px; COLOR: #333333; LINE-HEIGHT: 18px; HEIGHT: 99px
+}
+.MMessage H2 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 4px 0px
+}
+.MStyle0 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style0s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle1 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style1s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle2 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style2s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle3 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style3s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle4 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style4s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle5 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style5s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle100 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; BACKGROUND: url(./M/style100s.gif) no-repeat 0px 4px; PADDING-BOTTOM: 0px; PADDING-TOP: 11px; HEIGHT: 88px
+}
+.MStyle0 .Head {
+	COLOR: #ff3992
+}
+.MStyle0 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #ff3992; TEXT-ALIGN: right
+}
+.MStyle1 .Head {
+	COLOR: #cc0000
+}
+.MStyle1 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #cc0000; TEXT-ALIGN: right
+}
+.MStyle2 .Head {
+	COLOR: #0096eb
+}
+.MStyle2 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #0096eb; TEXT-ALIGN: right
+}
+.MStyle3 .Head {
+	COLOR: #00b115
+}
+.MStyle3 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #00b115; TEXT-ALIGN: right
+}
+.MStyle4 .Head {
+	COLOR: #a800d8
+}
+.MStyle4 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #a800d8; TEXT-ALIGN: right
+}
+.MStyle5 .Head {
+	COLOR: #ff6600
+}
+.MStyle5 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #ff6600; TEXT-ALIGN: right
+}
+.MStyle100 .Head {
+	COLOR: #ff0000
+}
+.MStyle100 .Sign {
+	MARGIN: -4px 0px 0px; COLOR: #ff0000; TEXT-ALIGN: right
+}
+.MNum {
+	PADDING-LEFT: 9px; CURSOR: move; TEXT-ALIGN: left
+}
+.MNum IMG {
+	MARGIN-TOP: -17px; FLOAT: right; CURSOR: pointer
+}
+.MDetail {
+	MARGIN: 2px -1px 6px 0px; OVERFLOW: hidden; LINE-HEIGHT: 17px; HEIGHT: 41px; TEXT-ALIGN: left
+}
+#Illu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; Z-INDEX: 20000; BACKGROUND: url(./bg_diy.jpg) no-repeat; LEFT: 17px; PADDING-BOTTOM: 0px; WIDTH: 655px; LINE-HEIGHT: 24px; PADDING-TOP: 12px; POSITION: absolute; TOP: 14px; HEIGHT: 58px
+}
+#Illu P {
+	MARGIN: 4px 0px
+}
+#Tips {
+	BORDER-RIGHT: #3d9a13 1px solid; PADDING-RIGHT: 8px; BORDER-TOP: #3d9a13 1px solid; DISPLAY: none; PADDING-LEFT: 8px; Z-INDEX: 200001; LEFT: 50px; PADDING-BOTTOM: 8px; BORDER-LEFT: #3d9a13 1px solid; WIDTH: 680px; PADDING-TOP: 8px; BORDER-BOTTOM: #3d9a13 1px solid; POSITION: relative; TOP: 79px; BACKGROUND-COLOR: #ffffff
+}
+.screen {
+	PADDING-RIGHT: 24px; PADDING-LEFT: 19px; BACKGROUND: url(./screen_tips.gif) no-repeat 9px 50%; PADDING-BOTTOM: 0px; WIDTH: 93px; COLOR: #888888; PADDING-TOP: 22px; HEIGHT: 78px
+}
+.screen H6 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 0px 0px 5px; COLOR: #ffffff
+}
+.screen P {
+	MARGIN: 0px
+}
+.console {
+	DISPLAY: none; Z-INDEX: 100; FILTER: alpha(Opacity=35); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: -121px; HEIGHT: 600px; BACKGROUND-COLOR: #000000; opacity: 0.35
+}
+#Tips TD H5 {
+	FONT-SIZE: 12px; MARGIN: 5px 0px; COLOR: #ff3992
+}
+#Tips TD OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#Tips TD OL LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 3px; WORD-BREAK: keep-all; PADDING-TOP: 0px; WHITE-SPACE: nowrap; LIST-STYLE-TYPE: none
+}
+BODY {
+	FONT-SIZE: 12px; BACKGROUND: url(./bg0.jpg); MARGIN: 0px; COLOR: #333333; WORD-BREAK: break-all; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+#Logo {
+	BACKGROUND: url(./bg_top_valentine.jpg) repeat-x; HEIGHT: 82px
+}
+#Feast IMG {
+	FLOAT: right; MARGIN: 7px 20px 0px 0px
+}
+#Search {
+	PADDING-RIGHT: 0px; BORDER-TOP: #3d9a13 2px solid; PADDING-LEFT: 5px; BACKGROUND: url(./bg_search.gif) repeat-x; PADDING-BOTTOM: 0px; PADDING-TOP: 5px; BORDER-BOTTOM: #3d9a13 2px solid; HEIGHT: 30px
+}
+#Search IMG {
+	FLOAT: left; MARGIN-RIGHT: 6px
+}
+#Search FORM {
+	FLOAT: left; MARGIN: 0px 0px 0px 34px
+}
+#ContOuter {
+	BACKGROUND: url(./bg.jpg)
+}
+#ContInner {
+	BACKGROUND: url(./banner_decoration.gif) repeat-x 50% top
+}
+#Cont {
+	Z-INDEX: 1; BACKGROUND: url(./bg_bottom_s.jpg) repeat-x left bottom
+}
+#Right {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; Z-INDEX: 1; BACKGROUND: url(./right_board.jpg) no-repeat left top; LEFT: 706px; PADDING-BOTTOM: 0px; WIDTH: 275px; PADDING-TOP: 434px; POSITION: absolute; HEIGHT: 64px
+}
+#Foot {
+	MARGIN-TOP: -3px
+}
+A.a_black {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.a_black:hover {
+	TEXT-DECORATION: none
+}
+A.a_white {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.a_white:hover {
+	TEXT-DECORATION: none
+}
+A.a_green {
+	COLOR: #70b817; TEXT-DECORATION: underline
+}
+A.a_green:hover {
+	TEXT-DECORATION: none
+}
+A.a_pink {
+	COLOR: #ff3992; TEXT-DECORATION: underline
+}
+A.a_pink:hover {
+	TEXT-DECORATION: none
+}
+A.a_gray9 {
+	COLOR: #999999; TEXT-DECORATION: underline
+}
+A.a_gray9:hover {
+	TEXT-DECORATION: none
+}
+.t_orab {
+	FONT-WEIGHT: bold; COLOR: #ff6600
+}
+.t_green {
+	COLOR: #70b817
+}
+.AC {
+	TEXT-ALIGN: center
+}
+.input {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #666666 1px solid; PADDING-LEFT: 3px; BACKGROUND: url(./input_bg.gif) no-repeat; PADDING-BOTTOM: 3px; MARGIN: -5px 5px 0px -5px; BORDER-LEFT: #666666 1px solid; WIDTH: 90px; COLOR: #999999; PADDING-TOP: 3px; BORDER-BOTTOM: #666666 1px solid; HEIGHT: 14px
+}
+.copyrightfont {
+	COLOR: #333333
+}
+#overlay IMG {
+	BORDER-TOP-STYLE: none; 
+	BORDER-RIGHT-STYLE: none; 
+	BORDER-LEFT-STYLE: none; 
+	BORDER-BOTTOM-STYLE: none;
+}
+#overlay {
+	BACKGROUND-IMAGE: url(extend/lovewall/overlay.png);
+}
+HTML #overlay {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="extend/lovewall/overlay.png", sizingMethod="scale"); 
+	BACKGROUND-IMAGE: url(blank.gif); 
+	BACKGROUND-COLOR: transparent;
+}

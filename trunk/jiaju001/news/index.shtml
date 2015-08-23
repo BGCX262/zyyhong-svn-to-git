@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="北京家居网专业装修家居资讯 、 装修设计师点评、装修效果图指导" />
+<meta name="keywords" content="装修资讯,施工技巧,装修方案,装修经验,装修指南,装修材料,装修效果图,室内装修 " />
+<link href='/images/news_style.css' rel='stylesheet' type='text/css'>
+<link href='http://www.jiaju001.com/images/common.css' rel='stylesheet' type='text/css'>
+<title>装修家居资讯、室内设计点评</title>
+</head>
+
+<body>
+<!--#include virtual="/include/header.php" -->
+<div class="wrap lb"><a href="http://www.jiaju001.com/huodong/191.html"><img src="http://www.jiaju001.com/images3/jicai/201004/yugaoad.jpg" alt="北京家居网集采" /></a><div class="clear"></div></div>
+<div class="wrap lt">
+<div class="lt">
+	<div class="jdt l4">
+        <script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var focus_width=300;
+var focus_height=260;
+var text_height=0;
+var pics = "";
+var links = "";
+var texts = "";
+var swf_height = focus_height+text_height;
+var defJpeg = "/images/jpg.jpg";
+linkarr[1] = "/story/200812/5439.shtml";
+picarr[1] = "/uploads/allimg/090417/1042170_lit.jpg";
+textarr[1] = "装修一美二精三省";linkarr[2] = "/yanshou/200812/4759.shtml";
+picarr[2] = "/uploads/allimg/090417/1032470_lit.jpg";
+textarr[2] = "家庭装修吊顶验收有规范";linkarr[3] = "/yanshou/200812/4760.shtml";
+picarr[3] = "/uploads/allimg/090417/1030530_lit.jpg";
+textarr[3] = "十一种家装投诉不受理";linkarr[4] = "/yanshou/200812/4761.shtml";
+picarr[4] = "/uploads/allimg/090417/1028350_lit.jpg";
+textarr[4] = "家装宝典：装修后自己如何";linkarr[5] = "/yanshou/200812/4762.shtml";
+picarr[5] = "/uploads/allimg/090417/1027130_lit.jpg";
+textarr[5] = "装修质量自测有妙招";
+for(i=1;i<picarr.length;i++){
+  if(picarr[i].indexOf("jpg")==-1 && picarr[i].indexOf("JPG")==-1) picarr[i] = defJpeg;
+  if(pics=="") pics = picarr[i];
+  else pics += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="/templets/images/slide.swf">');
+document.write('<param name="quality" value="high"><param name="bgcolor" value="#ffffff">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+document.write('<embed src="images/slide.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+        </div>
+	<div class="jdtr">
+		<div class="jdtr_top">
+                <a href="/jiajuhuodong/201004/6792.shtml" target="_blank" title="阿振装饰装修大比拼阿振装饰为你服务">阿振装饰装修大比拼阿振装饰为你服务</a>
+                  </div>
+		<div class="jdtr_tp">
+                <div class="jdtr_a">
+                [<a href='/hangye/201003/6772.shtml'>家装市场迎来“暖春”</a>]
+                </div>
+                <div class="jdtr_a">
+               [<a href='/hangye/201001/6268.shtml'>2009大型团购活动回顾</a>]
+                </div>
+                </div>
+		<div class="jdtr_bot">
+                <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6802.shtml" target="_blank" title="<b>家居调查：半数消费者注重</b>"><b>家居调查：半数消费者注重</b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6801.shtml" target="_blank" title="<b>建材超市十年之痒</b>"><b>建材超市十年之痒</b></a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6800.shtml" target="_blank" title="<b>五一前夕 家居卖场上演送</b>"><b>五一前夕 家居卖场上演送</b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6799.shtml" target="_blank" title="<b>2010年中国门窗六大消费趋</b>"><b>2010年中国门窗六大消费趋</b></a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6798.shtml" target="_blank" title="<b>家装行业启动保障性装修</b>"><b>家装行业启动保障性装修</b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6797.shtml" target="_blank" title="<b>家居行业纷纷“触电” 网</b>"><b>家居行业纷纷“触电” 网</b></a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6796.shtml" target="_blank" title="<b>卫浴五金行业环保意识觉醒</b>"><b>卫浴五金行业环保意识觉醒</b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6795.shtml" target="_blank" title="<b>美原材料涨价幅度40年难遇</b>"><b>美原材料涨价幅度40年难遇</b></a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6794.shtml" target="_blank" title="<b>为生活而设计 一颗优雅的</b>"><b>为生活而设计 一颗优雅的</b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6793.shtml" target="_blank" title="<b>五一黄金周即将到来 家居</b>"><b>五一黄金周即将到来 家居</b></a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6791.shtml" target="_blank" title="<b>五一换季消费 建材新品上</b>"><b>五一换季消费 建材新品上</b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6790.shtml" target="_blank" title="<b>中国家具行业萌生绿意</b>"><b>中国家具行业萌生绿意</b></a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href="/hangye/201004/6789.shtml" target="_blank" title="<b>天津将出台家装指导价格 </b>"><b>天津将出台家装指导价格 </b></a></li>	</td>
+	<td width='50%'>
+<li><a href="/hangye/201004/6788.shtml" target="_blank" title="<b>卫浴市场面临疲软 品牌服</b>"><b>卫浴市场面临疲软 品牌服</b></a></li>	</td>
+	</tr>
+	</table>
+                </div>
+
+	</div>
+	<div class="jdtrr">
+	<!--#include virtual="/include/index.right2.php" -->
+			<div><a href="http://bbs.jiaju001.com/forumdisplay.php?fid=13&filter=type&typeid=1"><img src="/images/a2.jpg" width="215px" height="72px" border="0"></a></div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="sj l4">
+	<div class="sjtxt">家居设计</div>
+	<div class="sjimg">
+        <li><a href='/shineisheji/200908/6027.shtml'><img src='/uploads/allimg/090814/1617310_lit.jpg' border='0' width='120' height='120' alt='家装流行元素大集合'></a><br /><a href='/shineisheji/200908/6027.shtml'>家装流行</a></li><li><a href='/shineisheji/200910/6077.shtml'><img src='/uploads/allimg/091021/0939070_lit.jpg' border='0' width='120' height='120' alt='小公寓大变革：悬在半空的空中楼房'></a><br /><a href='/shineisheji/200910/6077.shtml'>小公寓大</a></li><li><a href='/shineisheji/200910/6110.shtml'><img src='/uploads/allimg/091030/0947480_lit.jpg' border='0' width='120' height='120' alt='小户型变大空间 10平米5种不平庸的设计方案'></a><br /><a href='/shineisheji/200910/6110.shtml'>小户型变</a></li><li><a href='/shineisheji/200910/6049.shtml'><img src='/uploads/allimg/091014/0946350_lit.jpg' border='0' width='120' height='120' alt='三种不同居室风格 尽享完美细节'></a><br /><a href='/shineisheji/200910/6049.shtml'>三种不同</a></li><li><a href='/shineisheji/201001/6714.shtml'><img src='/uploads/allimg/100128/1008530_lit.jpg' border='0' width='120' height='120' alt='割舍不下时空交错的古典'></a><br /><a href='/shineisheji/201001/6714.shtml'>割舍不下</a></li><li><a href='/shineisheji/200910/6087.shtml'><img src='/uploads/allimg/091023/0957130_lit.jpg' border='0' width='120' height='120' alt='建设新农村别墅----乡下自建房欧式设计实景'></a><br /><a href='/shineisheji/200910/6087.shtml'>建设新农</a></li><li><a href='/shineisheji/200908/6011.shtml'><img src='/uploads/allimg/090804/1321440_lit.jpg' border='0' width='120' height='120' alt='简单的中式风格印象'></a><br /><a href='/shineisheji/200908/6011.shtml'>简单的中</a></li>
+	</div>
+</div>
+<div class="lml">
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">室内设计</div><div class="txt_r">><a href="/shineisheji/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                         <a href='/shineisheji/200911/6177.shtml'><img src='/uploads/allimg/091126/0925130_lit.jpg' border='0' width='120' height='120' alt='手绘改变传统玻璃单一的形象'></a>
+                        </div>
+			<div class="lm_r">
+				<div class="lm_rtxt"><a href="/shineisheji/201001/6266.shtml" target="_blank" title="感受时尚脉搏，深圳蜂巢餐">感受时尚脉搏，深圳蜂巢餐</a></div>
+				<div class="lm_rtxt2"><p>深圳蜂巢，是广东省深圳市内的一家餐厅。蜂巢位于一个商业建筑内，其中包括剧院、商店和溜冰场等。在周末很<a href="/shineisheji/201001/6266.shtml" target="_blank" title="感受时尚脉搏，深圳蜂巢餐">...</a></p></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/shineisheji/200912/6219.shtml'>墅.概念中的雍容华贵</a></li>	</td>
+	<td width='50%'>
+<li><a href='/shineisheji/200910/6058.shtml'>让平凡家具多一些优雅简单</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/shineisheji/200912/6212.shtml'>流露家的温馨 网友秀精致</a></li>	</td>
+	<td width='50%'>
+<li><a href='/shineisheji/200910/6068.shtml'>110平大气现代白金版简欧</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/shineisheji/200911/6145.shtml'>壁纸 调制空间效果的魔法</a></li>	</td>
+	<td width='50%'>
+<li><a href='/shineisheji/201001/6691.shtml'>图片装修专题</a></li>	</td>
+	</tr>
+	</table>
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">装修DIY</div><div class="txt_r">><a href="/diy/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        <a href='/diy/200812/4913.shtml'><img src='/uploads/allimg/090429/1506470_lit.jpg' border='0' width='120' height='120' alt='各色相框DIY:让相框诉说主人的心情故事'></a>
+                        </div>
+			<div class="lm_r">
+                         <div class="lm_rtxt"><a href="/diy/201001/6258.shtml" target="_blank" title="绝对超牛的装修，女业主DI">绝对超牛的装修，女业主DI</a></div>
+				<div class="lm_rtxt2"><p>工作告一段落以后，赚了点小钱，休整了一段时间，觉得百无聊赖，于是拿刚到手的新房子开涮瞎折腾。首先声明<a href="/diy/201001/6258.shtml" target="_blank" title="绝对超牛的装修，女业主DI">...</a></p></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/diy/200812/4894.shtml'>一次性筷子成"雅致花钵"　</a></li>	</td>
+	<td width='50%'>
+<li><a href='/diy/200812/4884.shtml'>炎热夏季巧用绿意消散酷暑</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/diy/200812/4977.shtml'>拿小花篮做大“文章”</a></li>	</td>
+	<td width='50%'>
+<li><a href='/diy/200812/4963.shtml'>照片饰墙手法 黑白&小照</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/diy/200812/4863.shtml'>给物品一个禅意包装</a></li>	</td>
+	<td width='50%'>
+<li><a href='/diy/200812/4829.shtml'>全金属DIY组合家私,个性化</a></li>	</td>
+	</tr>
+	</table>
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg"><a href="http://www.homebjjj.com/cuxiao/198.html"><img src="/images/homct.gif" width="708" hight="80"></a></div>
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">装修故事</div><div class="txt_r">><a href="/story/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        <a href='/story/200812/5459.shtml'><img src='/uploads/allimg/090320/0945410_lit.jpg' border='0' width='120' height='120' alt='富是什么样子的？你看比尔.盖茨的客厅(图)'></a>
+                        </div>
+			<div class="lm_r">
+                         <div class="lm_rtxt"><a href="/story/200812/5861.shtml" target="_blank" title="40平米大文章 三招内小居">40平米大文章 三招内小居</a></div>
+				<div class="lm_rtxt2">
+
+
+　　小户型眼下已成为相当一部分人的居住常态，那怎样才能在小空间里做出“大文章”呢？在国贸一家单<a href="/story/200812/5861.shtml" target="_blank" title="40平米大文章 三招内小居">...</a></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/story/200812/5259.shtml'>著名演员陈好：给家投放更</a></li>	</td>
+	<td width='50%'>
+<li><a href='/story/200812/5335.shtml'>分享装修经验(图)</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/story/200812/4988.shtml'>2套小户型房的不同装修风</a></li>	</td>
+	<td width='50%'>
+<li><a href='/story/200812/5211.shtml'>家在空中放飞</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/story/200812/5351.shtml'>“艳舞女郎”家住回龙观 </a></li>	</td>
+	<td width='50%'>
+<li><a href='/story/200812/5413.shtml'>时尚女性的时尚家居(图)</a></li>	</td>
+	</tr>
+	</table>
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">施工常识</div><div class="txt_r">><a href="/shigong/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        <a href='/shigong/200812/4603.shtml'><img src='http://news.homebjjj.com/uploads/userup/0908/0414161D616.jpg' border='0' width='120' height='120' alt='强化地板好坏看基材'></a>
+</div>
+			<div class="lm_r">
+                          <div class="lm_rtxt"><a href="/shigong/200812/4598.shtml" target="_blank" title="门窗安装常见问题及解决措">门窗安装常见问题及解决措</a></div>
+				<div class="lm_rtxt2"> 一、门窗框整体刚度差 
+　　（一）现象 
+　　推拉或启闭门窗或遇到大风天气，门窗框晃动。 
+　　（二）<a href="/shigong/200812/4598.shtml" target="_blank" title="门窗安装常见问题及解决措">...</a></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/shigong/200812/4464.shtml'>杜绝装修“隐患” 装修过</a></li>	</td>
+	<td width='50%'>
+<li><a href='/shigong/200812/4183.shtml'>装修旺季提前准备 错开装</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/shigong/200812/4421.shtml'>卫生间装修防水千万不能忽</a></li>	</td>
+	<td width='50%'>
+<li><a href='/shigong/200812/4609.shtml'>用色彩装扮家 喷刷有学问 </a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/shigong/200812/4166.shtml'>室内装修做预算须注意几点</a></li>	</td>
+	<td width='50%'>
+<li><a href='/shigong/200812/4580.shtml'>扯起集体装修大旗</a></li>	</td>
+	</tr>
+	</table>
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg"><a href="http://www.cnjzjj.com/special/20091010/index.html
+"><img src="/images/award_708_80.jpg" width="708" hight="80"></a></div>
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">家居风水</div><div class="txt_r">><a href="/fengshui/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        <a href='/fengshui/200907/5974.shtml'><img src='/uploads/allimg/090804/1422090_lit.jpg' border='0' width='120' height='120' alt='开天窗可避邪 窗户隐藏玄机'></a>
+                        </div>
+			<div class="lm_r">
+                          <div class="lm_rtxt"><a href="/fengshui/200812/16.shtml" target="_blank" title="装修前必读——不得不防的">装修前必读——不得不防的</a></div>
+				<div class="lm_rtxt2">对绝大多数家庭来说，装修是件劳神又费力的事，加上不少公司的&ldquo;装修陷阱&rdquo;花样繁多，让人防不胜<a href="/fengshui/200812/16.shtml" target="_blank" title="装修前必读——不得不防的">...</a></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/fengshui/201001/6423.shtml'>挑选住宅时应考虑的一些风</a></li>	</td>
+	<td width='50%'>
+<li><a href='/fengshui/200812/4112.shtml'>你的“魔幻厨房”什么样</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/fengshui/201001/6403.shtml'>《天元歌》</a></li>	</td>
+	<td width='50%'>
+<li><a href='/fengshui/201001/6654.shtml'>地理风水：奇门常用凶格</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/fengshui/200812/3915.shtml'>黑橡木材质厨房设计的主流</a></li>	</td>
+	<td width='50%'>
+<li><a href='/fengshui/201001/6663.shtml'>深圳工厂财神的摆放位置</a></li>	</td>
+	</tr>
+	</table>
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">绿色装修</div><div class="txt_r">><a href="/zhuangxiu/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                         <a href='/zhuangxiu/200812/5851.shtml'><img src='/uploads/allimg/081229/1034000_lit.jpg' border='0' width='120' height='120' alt='室内空气污染对策：综合治理 源头预防'></a>
+ 
+                         </div>
+			<div class="lm_r">
+				 <div class="lm_rtxt"><a href="/zhuangxiu/200812/5867.shtml" target="_blank" title="打造绿色装修 健康环保自">打造绿色装修 健康环保自</a></div>
+				<div class="lm_rtxt2">　　如今家装绿色环保设计成为众多消费者追求的目标，而环保设计最初多体现在下面几个方面。注意空气流通，<a href="/zhuangxiu/200812/5867.shtml" target="_blank" title="打造绿色装修 健康环保自">...</a></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/zhuangxiu/200812/5482.shtml'>买了环保建材就等于环保装</a></li>	</td>
+	<td width='50%'>
+<li><a href='/zhuangxiu/200812/5524.shtml'>绿色装修：重视室内装修污</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/zhuangxiu/200812/5507.shtml'>装修污染不能承受之重</a></li>	</td>
+	<td width='50%'>
+<li><a href='/zhuangxiu/200812/3862.shtml'>装修施工应牢记的三个原则</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/zhuangxiu/200812/3754.shtml'>选加厚强化地板更需注重环</a></li>	</td>
+	<td width='50%'>
+<li><a href='/zhuangxiu/200812/5581.shtml'>不同植物与何种家具搭配</a></li>	</td>
+	</tr>
+	</table>
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg"><a href="http://www.jiaju001.com/store/bafeike.html"><img src="/images/mt.jpg" width="708" hight="80"></a></div>
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">监理验收</div><div class="txt_r">><a href="/jianliyanshou/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                         <a href='/jianliyanshou/200812/5872.shtml'><img src='http://cache.aries.sina.com.cn/supportshouse_d/decor_roomphoto/ad/32/20081126_5787_4.jpg' border='0' width='120' height='120' alt='封阳台的施工及验收'></a>
+
+                         </div>
+			<div class="lm_r">
+				<div class="lm_rtxt"><a href="/jianliyanshou/200812/5873.shtml" target="_blank" title="房屋装修质量检验七重关">房屋装修质量检验七重关</a></div>
+				<div class="lm_rtxt2">住房装饰装修完工后，验收一关必不可少。业主对工程进行验收，标准是装饰合同，业主签字的施工图及国家有关<a href="/jianliyanshou/200812/5873.shtml" target="_blank" title="房屋装修质量检验七重关">...</a></div>	
+               		</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/jianliyanshou/200812/5875.shtml'>【监理验收】家装监理基本</a></li>	</td>
+	<td width='50%'>
+<li><a href='/jianliyanshou/200812/5869.shtml'>塑钢门窗的验收方法</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/jianliyanshou/200812/5871.shtml'>提醒：免费量房也能变身收</a></li>	</td>
+	<td width='50%'>
+<li><a href='/jianliyanshou/200812/5872.shtml'>封阳台的施工及验收</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/jianliyanshou/200812/5874.shtml'>工程验收</a></li>	</td>
+	<td width='50%'>
+<li><a href='/jianliyanshou/200907/5985.shtml'>收房攻略，排除雷险</a></li>	</td>
+	</tr>
+	</table>
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">政策法规</div><div class="txt_r">><a href="/zhengcefagui/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        <a href='/zhengcefagui/200901/5888.shtml'><img src='http://news.homebjjj.com/uploads/userup/0908/04135AH109.jpg' border='0' width='120' height='120' alt='我国家具强制性标准要求'></a>
+                         </div>
+			<div class="lm_r">
+				<div class="lm_rtxt"><a href="/zhengcefagui/200901/5884.shtml" target="_blank" title="关于恢复木制品等免税政策">关于恢复木制品等免税政策</a></div>
+				<div class="lm_rtxt2">商务部和海关总署近日联合发布公告称,为积极应对金融危机影响,保持外贸稳定增长,调整加工贸易限制类和禁止<a href="/zhengcefagui/200901/5884.shtml" target="_blank" title="关于恢复木制品等免税政策">...</a></div>
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='50%'>
+<li><a href='/zhengcefagui/200812/5878.shtml'>橱柜业国家标准6月1日正式</a></li>	</td>
+	<td width='50%'>
+<li><a href='/zhengcefagui/200812/5876.shtml'>陶瓷砖质量监督有新规</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/zhengcefagui/200901/5886.shtml'>国家百亿资金驰援人造板、</a></li>	</td>
+	<td width='50%'>
+<li><a href='/zhengcefagui/200812/5880.shtml'>建设部： 卫浴间节能技术</a></li>	</td>
+	</tr>
+<tr>
+	<td width='50%'>
+<li><a href='/zhengcefagui/200909/6042.shtml'>质监局调查油漆涂料和木地</a></li>	</td>
+	<td width='50%'>
+<li><a href='/zhengcefagui/200901/5887.shtml'>关于加紧实施《民用建筑节</a></li>	</td>
+	</tr>
+	</table>
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg"><a href="http://www.homebjjj.com/store/faensha.html"><img src="/images/fns.jpg" width="708" hight="80"></a></div>
+</div>
+<div class="lmr">
+	<div class="lmr_a l4">
+		<div class="lmr_at"><div class="lmr_atxt">装饰装修</div><div class="txt_r">><a href="/shejishi/index.shtml">更多</a></div></div>
+	<div class="lmr_img">
+         <a href='/shejishi/200903/5913.shtml'><img src='/uploads/090928/_100UM61.jpg' border='0' width='120' height='120' alt='光大装饰 王潮元'></a><br />
+                          <a href='/shejishi/200903/5913.shtml'>光大装饰 王潮元</a>
+        </div>
+	<div class="lmr_txta">
+	<li><a href='/shejishi/200909/6040.shtml'>“轻装修重装饰”经济实惠</a></li><li><a href='/shejishi/200812/5856.shtml'>冯娜</a></li><li><a href='/shejishi/200903/5913.shtml'>光大装饰 王潮元</a></li><li><a href='/shejishi/200812/5854.shtml'>亚光亚装饰 张忠辉 </a></li><li><a href='/shejishi/200905/5929.shtml'>佳节有礼  爱居者引发家居</a></li><li><a href='/shejishi/200901/5889.shtml'>《美好家园》杂志“中国最</a></li>
+	</div>
+	</div>
+	<div class="lmr_a l4 lt">
+		<div class="lmr_at"><div class="lmr_atxt">论坛精华</div><div class="txt_r">><a href="http://bbs.jiaju001.com/">更多</a></div></div>
+	    <div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_dhI"></script>
+	</div>
+	</div>
+	<div class="lmr_b l4 lt">
+		<div class="lmr_at"><div class="lmr_atxt">论坛热帖</div><div class="txt_r">><a href="http://bbs.jiaju001.com/">更多</a></div></div>
+	    <div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_hot"></script>
+	</div>
+	</div>
+	<div class="lmr_b l4 lt">
+		<div class="lmr_at"><div class="lmr_atxt">装修问答</div><div class="txt_r">><a href="http://bbs.jiaju001.com/">更多</a></div></div>
+	    <div class="lmr_txt">
+	<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_news"></script>
+	</div>
+	</div>
+	<div class="gg2"><a href="http://www.jiaju001.com/store/wanghe.html"><img src="/images/img4.jpg" width="235px" hight="130px" border="0"></a></div>
+<div class="clear"></div>
+</div>
+<div>
+<div class="clear"></div>
+</div>
+<div>
+</div>
+</div>
+<div class="wrap l4">
+<div class="bot_top"><div class="sjtxt">装修图片</div></div>
+<div class="bot_img">
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5995.shtml'><img src='http://tu.r51.cn/userImg/lanyue/qujinglanyue001-a.jpg' border='0' width='120' height='120' alt='曲靖蓝月简单休闲二居室'></a><br /><a href='/zhuangxiutuku/200908/5995.shtml'>曲靖蓝月简单</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5993.shtml'><img src='/uploads/zhuangxiutuku/090803/_13592T53.jpg' border='0' width='120' height='120' alt='卧室装修效果图'></a><br /><a href='/zhuangxiutuku/200908/5993.shtml'>卧室装修效果</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5991.shtml'><img src='/uploads/zhuangxiutuku/090803/_1353524E.jpg' border='0' width='120' height='120' alt='09年最新装修图片'></a><br /><a href='/zhuangxiutuku/200908/5991.shtml'>09年最新装修</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5999.shtml'><img src='/uploads/zhuangxiutuku/090803/_14251Q09.jpg' border='0' width='120' height='120' alt='09最新装修图片09'></a><br /><a href='/zhuangxiutuku/200908/5999.shtml'>09最新装修图</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/6002.shtml'><img src='/uploads/zhuangxiutuku/090803/_142GN29.jpg' border='0' width='120' height='120' alt='09最新装修图片12'></a><br /><a href='/zhuangxiutuku/200908/6002.shtml'>09最新装修图</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/6024.shtml'><img src='http://www.tumtx.com/pic/zhuangxiutuku/canting/cantingzhuangxiuxiao-09080387.jpg' border='0' width='120' height='120' alt='餐厅装修效果图'></a><br /><a href='/zhuangxiutuku/200908/6024.shtml'>餐厅装修效果</a></li>	</td>
+	</tr>
+<tr>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5997.shtml'><img src='http://www.jimei.com.cn/uploadnews/img/2008_05/07/1210123906875_000.jpg' border='0' width='120' height='120' alt='三室两厅经典装修案例 甜蜜港湾绽放温馨[组图]'></a><br /><a href='/zhuangxiutuku/200908/5997.shtml'>三室两厅经典</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5998.shtml'><img src='/uploads/zhuangxiutuku/090803/_142004509.jpg' border='0' width='120' height='120' alt='09最新装修图片08'></a><br /><a href='/zhuangxiutuku/200908/5998.shtml'>09最新装修图</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/6000.shtml'><img src='/uploads/litimg/090803/14261321552.jpg' border='0' width='120' height='120' alt='09最新装修图片10'></a><br /><a href='/zhuangxiutuku/200908/6000.shtml'>09最新装修图</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5994.shtml'><img src='http://591hc.letfind.com.cn/UploadFiles/2009-7/2009725972914.jpg' border='0' width='120' height='120' alt='厨房装修效果图'></a><br /><a href='/zhuangxiutuku/200908/5994.shtml'>厨房装修效果</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/6001.shtml'><img src='/uploads/zhuangxiutuku/090803/_142639464.jpg' border='0' width='120' height='120' alt='09最新装修图片11'></a><br /><a href='/zhuangxiutuku/200908/6001.shtml'>09最新装修图</a></li>	</td>
+	<td width='17%'>
+<li><a href='/zhuangxiutuku/200908/5992.shtml'><img src='http://www.jimei.com.cn/uploadnews/img/2008_06/13/1213322090078_000.jpg' border='0' width='120' height='120' alt='晒晒房奴2室2厅的灵动小家 极简之美复式楼(图)'></a><br /><a href='/zhuangxiutuku/200908/5992.shtml'>晒晒房奴2室2</a></li>	</td>
+	</tr>
+	</table>
+<div class="clear"></div>
+</div>
+</div>
+<div class="wrap">
+<div class="lt"  style="float:left"><div style=" width:180px; height:100px; border:#E4E4E4 solid 1px; margin-right:10px; float:left; text-align:center; padding:1px 1px"><a href="http://www.tv8zone.com/subjects/shuxiangbeijing/" target="_blank"><img src="/images/2.gif" border="0"></a></div>
+<div style=" width:180px; height:100px; border:#E4E4E4 solid 1px; margin-right:10px; float:left; text-align:center; padding:1px 1px"><a href="http://www.818sou.com" target="_blank"><img src="/images/818.gif" border="0"></a></div>
+<div style=" width:180px; height:100px; border:#E4E4E4 solid 1px; margin-right:10px; float:left; text-align:center; padding:1px 1px"><a href="http://www.dichn.com/ShopMall/default.aspx" target="_blank"><img src="/images/180b.jpg" border="0"></a></div>
+<div style=" width:360px; height:100px; border:#E4E4E4 solid 1px; margin-right:0px; float:left; text-align:center; padding:1px 1px"><a href="http://jianzhu.china-b.com/" target="_blank"><img src="/images/180c.gif" border="0"></a></div></div>
+<div class="lt"  style="float:left">
+<table width="950px" height="20" border="0" cellspacing="0" cellpadding="0" style="text-align:center">
+  <tr>
+    <td style='width:180px;'><div style="position:relative">
+      <embed style="position:relative; z-index:0; " src="/images/dh180.swf"  quality=high width=180 height=100 type="application/x-shockwave-flash"  pluginspage=" http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"  wmode="opaque"> </embed>
+      <a href=" http://fuwu.andfang.com" target="_blank" style="cursor:pointer">
+        <div style="position:absolute;filter:alpha(opacity=0);opacity :0;-moz- opacity:0;left:0px;top:0px; background:#CDEAF6;width:180px;height:100px;z-index:10"> </div>
+      </a> </div></td>
+    <td><a href="http://www.jc186.cn/" target="_blank"><img src="/images/nfjcw.jpg" /></a></td>
+    <td><a href="http://www.myfun7.com/" target="_blank"><img src="/images/myfun7.gif" /></a></td>
+    <td><a href="http://www.wenshaktv.com/" target="_blank"><img src="/images/360.png" /></a></td>
+  </tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<div class="wrap lin" style="margin-top:5px !important; margin-top:5px;"><div class="p4"><div style="text-align:right"><div style="float:left"><strong>友情连接</strong></div><a href='/plus/flink.php'>更多>></a> | <a href="/plus/flink-add.php">申请加入</a></div>
+ <a href='http://www.byjcw.com' target='_blank'>八益建材网</a>  <a href='http://www.86build.com/' target='_blank'>中华建筑网</a>  <a href='http://www.bjdfgd.net/' target='_blank'>光大装饰</a>  <a href='http://www.aiju.com' target='_blank'>爱居者</a>  <a href='http://www.heyaq.cn/' target='_blank'>武汉和雅趣藤艺网</a>  <a href='http://jiaxing.go007.com' target='_blank'>嘉兴租房</a>  <a href='http://www.58golf.com' target='_blank'>高尔夫</a>  <a href='http://www.vipchugui.com/' target='_blank'>中国品牌橱柜网</a>  <a href='http://www.bdqn.info/' target='_blank'>北大青鸟学校</a>  <a href='http://www.tjxyy56.com.cn' target='_blank'>天津物流公司</a>  <a href='http://www.lzfzpf.cn' target='_blank'>服装批发</a>  <a href='http://www.cnfsfz.cn' target='_blank'>皮具批发</a>  <a href='http://www.packeteer.cn' target='_blank'>u88</a>  <a href='http://www.31xx.cn' target='_blank'>28</a>  <a href='http://www.fzml.net/' target='_blank'>中国纺织面料网</a>  <a href='http://www.xurids.com/' target='_blank'>郑州装修公司</a>  <a href='http://www.beijing.net/' target='_blank'>北京生活网</a>  <a href='http://www.jianzhu168.net' target='_blank'>中国工程信息网</a>  <a href='http://www.188jc.com' target='_blank'>中国建材交易信息网</a>  <a href='http://www.tuango.cc' target='_blank'>聚远团购</a>  <a href='http://www.asiaym.com' target='_blank'>长沙扬名建材</a>  <a href='http://www.blemall.com' target='_blank'>百联E城</a>  <a href='http://beijing.apinpai.com' target='_blank'>北京生活服务</a>  <a href='http://www.bnqy.com' target='_blank'>婚庆公司</a>  <a href='http://www.ekave.cn' target='_blank'>一卡惠打折网</a>  <a href='http://www.800zm.cn' target='_blank'>莆田家装在线</a>  <a href='http://www.qingdaobangongjiaju.com' target='_blank'>青岛办公家具</a>  <a href='http://www.tisahome.com' target='_blank'>天盛嘉森</a>  <a href='http://www.sdsj.com.cn' target='_blank'>圣点装饰</a>  <a href='http://www.kuoda.com.cn' target='_blank'>阔达装饰</a>  <a href='http://www.5s5j.com' target='_blank'>我饰我家</a>  <a href='http://www.esuliao.com' target='_blank'>中国塑料网</a>  <a href='http://www.jianbohui.com' target='_blank'>健博会</a>  <a href='http://www.cnnbjj.com' target='_blank'>中国宁波家具网</a>  <a href='http://www.housing-on-line.com' target='_blank'>注册香港公司</a>  <a href='http://www.jc186.cn' target='_blank'>南方建材</a>  <a href='http://www.dichan.com' target='_blank'>中国地产</a>  <a href='http://cq.zhcoo.com' target='_blank'>家装网</a> 
+</div></div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

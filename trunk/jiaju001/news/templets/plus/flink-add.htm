@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>申请友情链接 -北京家居网</title>
+<link href="../templets/style/nspage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="main mceneter">
+	<div class="toplogo">
+		<div class="logo">
+				<a href="/"><img src="../templets/images/toplogo.gif" /></a>		</div>
+		<div class="title">
+			友情链接
+		</div>
+	</div>
+	<div class="cmain">
+		
+		<div class="ctitle">
+			<h1>申请加入</h1>
+			<span></span>
+		</div>
+		<div class="cbox mceneter">
+			<div class="linkadd">
+			<form name="addlink" method="post" action="flink.php">
+			<input type='hidden' name='dopost' value='save' />
+				<dl>
+					<dt>网站名:</dt>
+					<dd><input name="webname" type="text" size="30" />
+					</dd>
+				</dl>
+				<dl>
+					<dt>网址:</dt>
+					<dd><input name="url" type="text" size="30" />
+					</dd>
+				</dl>
+				<dl>
+					<dt>网站LOGO:</dt>
+					<dd><input name="logo" type="text" size="30" />
+					</dd>
+				</dl>
+				<dl>
+					<dt>站长eMail:</dt>
+					<dd><input name="email" type="text" size="30" />
+					</dd>
+				</dl>
+				<dl>
+					<dt>网站类型:</dt>
+					<dd>
+						<select name="typeid" id="typeid">
+							<?php 
+								$dsql = new DedeSql(false);
+								$dsql->SetQuery("select * from #@__flinktype");
+								$dsql->Execute();
+								while($row=$dsql->GetObject())
+								{
+								echo "	<option value='".$row->ID."'>".$row->typename."</option>\r\n";
+								}
+								$dsql->Close();
+							?>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>网站概况:</dt>
+					<dd><textarea name="msg" cols="30" rows="3"></textarea>
+					</dd>
+				</dl>
+				<dl>
+					<dt>验证码:</dt>
+					<dd><input name="validate" type="text" size="4" /><img src="../include/vdimgck.php" width="50" height="20" />
+					</dd>
+				</dl>
+				<div class="submit">
+					<input name="提交" type="submit" id="提交" value="提交" class="button" />
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="copyright mceneter">
+Powered by <a href="http://www.homebjjj.com" target="_blank">北京家居网</a> © 2008</div>
+
+
+</body>
+</html>

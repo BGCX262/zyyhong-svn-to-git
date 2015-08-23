@@ -1,0 +1,6 @@
+<?php
+$z[0]=Array("page","",0,25);
+$z[0][4]['pagesize']="5";
+$z[1]=Array("datalist","\r\ndocument.write(\"<dl>\");\r\ndocument.write(\"    <dt><strong> [field:username/]([field:ip function=substr(@me,0,strrpos(@me,'.'))/].*) </strong>发表于：<span>[field:dtime function=GetDateMk('@me')/]</span> </dt>\");\r\ndocument.write(\"    <dd>[field:msg function='cnw_left_safe(\"@me\",100)'/]</dd> \");\r\ndocument.write(\"</dl>\");\r\n",27,385);
+
+?>

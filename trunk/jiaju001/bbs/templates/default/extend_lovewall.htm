@@ -1,0 +1,47 @@
+{template header}
+
+<table cellspacing="0" cellpadding="0" border="0" width="98%" align="center" style="table-layout: fixed">
+<tr><td class="nav" width="85%" align="left" nowrap>&nbsp;<a href="index.php">$bbname</a> $navigation</td>
+</tr></table>
+<div class="clearfloat" style="line-height:4px;">&nbsp;</div>
+<!--{if $adminid == 1}-->
+<table cellspacing="1" cellpadding="3" border="0" width="98%" class="tableborder" align="center">
+<tr><td class="header" width="80">爱墙信息管理</td>
+<td width="80"><a href="lovewall.php?index=listmsg"><b>[祝福管理]</b></a></td>
+<td width="80"><a href="lovewall.php?index=cache"><b>[生成缓存]</b></a></td>
+<td width="80"><a href="lovewall.php?index=position"><b>[边界测试]</b></a></td>
+<td width="100"><a href="lovewall.php?index=checkpos"><b>[修复坐标]</b></a></td>
+<td><a href=""></a></td></tr></table>
+<div class="clearfloat" style="line-height:4px;">&nbsp;</div>
+<!--{/if}-->
+
+<table cellspacing="0" cellpadding="0" border="0" width="98%" height="100%">
+<tr><td height="820" valign="top" background="extend/lovewall/lovewall.jpg">
+
+<FORM name=f action="lovewall.php?index=somsg&page=$page" method=post>
+<TABLE width="100%" border=0 background="extend/lovewall/bg_top_valentine.jpg" height="82">
+<TBODY>
+<TR>
+	<TD align="left"><A href="lovewall.php?index=sendmsg"><IMG height=48 hspace=10 src="./extend/lovewall/btn_diy.gif" width=142 align=left border=0></A></td>
+	<TD align=right width="130"><INPUT class="sbtinput" id="scripNo" onclick="this.value = '';" value="$massages" name="massages"></TD>
+    <TD width="82"><INPUT name="submit" class="sbtimage" value="true" onclick="searchmessage();" type="image" src="./extend/lovewall/btn_search.gif" align="absMiddle"></TD>
+</TR></TBODY></TABLE></FORM>
+
+<!--{if $index == 'sendmsg'}-->
+	{template extend_lovewall_sendmsg}
+<!--{elseif $index == 'listmsg'}-->
+	{template extend_lovewall_listmsg}
+<!--{else}-->
+	{template extend_lovewall_default}
+<!--{/if}-->
+</td></tr>
+<tr><td background="extend/lovewall/bg_bottom_s.jpg" height="91"></td></tr></table>
+<table width="98%" cellspacing="0" cellpadding="0" align="center">
+<tr><td valign="top">$multipage</td></tr></table>
+
+{template footer}
+<!--{if $index == 'somsg' and $massages}-->
+<script>
+showLightbox('$massages');
+</script>
+<!--{/if}-->

@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="{dede:global name='cfg_description'/}" />
+<meta name="keywords" content="{dede:global name='cfg_keywords'/}" />
+<link href='/images/news_style.css' rel='stylesheet' type='text/css'>
+<link href='http://shy.jiaju001.com/images/common.css' rel='stylesheet' type='text/css'>
+<SCRIPT src="http://shy.jiaju001.com/js/sinaflash.js" type=text/javascript></SCRIPT>
+<title>{dede:global name='cfg_webname'/}</title>
+</head>
+
+<body>
+<!--#include virtual="/include/headershy.php" -->
+<div class="wrap lb">{dede:myad name='top'/}<div class="clear"></div></div>
+<div class="wrap lt">
+<div class="lt">
+	<div class="jdt l4">
+        <script language='javascript'>
+linkarr = new Array();
+picarr = new Array();
+textarr = new Array();
+var focus_width=300;
+var focus_height=260;
+var text_height=0;
+var pics = "";
+var links = "";
+var texts = "";
+var swf_height = focus_height+text_height;
+var defJpeg = "/images/jpg.jpg";
+{dede:arclist row=5 titlelen=24 orderby=pubdate att=3}
+linkarr[[field:global name=autoindex/]] = "[field:arcurl/]";
+picarr[[field:global name=autoindex/]] = "[field:litpic/]";
+textarr[[field:global name=autoindex/]] = "[field:title/]";
+{/dede:arclist}
+for(i=1;i<picarr.length;i++){
+  if(picarr[i].indexOf("jpg")==-1 && picarr[i].indexOf("JPG")==-1) picarr[i] = defJpeg;
+  if(pics=="") pics = picarr[i];
+  else pics += "|"+picarr[i];
+}
+for(i=1;i<linkarr.length;i++){
+  if(links=="") links = linkarr[i];
+  else links += "|"+linkarr[i];
+}
+for(i=1;i<textarr.length;i++){
+  if(texts=="") texts = textarr[i];
+  else texts += "|"+textarr[i];
+}
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="{dede:global name='cfg_templeturl'/}/images/slide.swf">');
+document.write('<param name="quality" value="high"><param name="bgcolor" value="#ffffff">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+document.write('<embed src="/images/slide.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ focus_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+        </div>
+	<div class="jdtr">
+		<div class="jdtr_top">
+                {dede:arclist typeid='' row=1 titlelen=34 att=2}
+                 <a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a>
+                {/dede:arclist}
+                  </div>
+		<div class="jdtr_tp">
+                <div class="jdtr_a">
+                {dede:arclist row=1 titlelen=24 orderby=pubdate typeid=12 att=4}
+                 [[field:textlink/]]
+                {/dede:arclist}
+                </div>
+                <div class="jdtr_a">
+               {dede:arclist row=1 titlelen=24 orderby=pubdate  att=5}
+               [[field:textlink/]]
+                {/dede:arclist}
+                </div>
+                </div>
+		<div class="jdtr_bot">
+                {dede:artlist orderby=pubdate typeid=3 row='14' col=2 titlelen='24'}
+     <li><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+    {/dede:artlist}
+                </div>
+
+	</div>
+	<div class="jdtrr">
+	<!--#include virtual="/include/index.right2.php" -->
+			<div><a href="http://www.jiaju001.com/store/yingpai.html"><img src="/images/a2.jpg" width="215px" height="72px" border="0"></a></div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="sj l4">
+	<div class="sjtxt">家居设计</div>
+	<div class="sjimg">
+        {dede:arclist row=7 titlelen=8 orderby=rand type='image.' typeid='22' }
+	<li>[field:imglink/]<br />[field:textlink/]</li>
+        {/dede:arclist}
+	</div>
+</div>
+<div class="lml">
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">室内设计</div><div class="txt_r">><a href="/shineisheji/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                         {dede:arclist row=1 titlelen=24 orderby=rand typeid=22 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+                        </div>
+			<div class="lm_r">
+				{dede:arclist typeid='22' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2"><p>[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></p></div>
+                          {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=22 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">装修DIY</div><div class="txt_r">><a href="/diy/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        {dede:arclist row=1 titlelen=24 orderby=rand typeid=7 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+                        </div>
+			<div class="lm_r">
+                         {dede:arclist typeid='7' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2"><p>[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></p></div>
+                          {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=7 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg">{dede:myad name='gga'/}</div>
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">装修故事</div><div class="txt_r">><a href="/story/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        {dede:arclist row=1 orderby=rand typeid=8 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+                        </div>
+			<div class="lm_r">
+                         {dede:arclist typeid='8' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></div>
+                        {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=8 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">施工常识</div><div class="txt_r">><a href="/shigong/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        {dede:arclist row=1 orderby=rand typeid=10 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+</div>
+			<div class="lm_r">
+                          {dede:arclist typeid='10' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></div>
+                           {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=10 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg">{dede:myad name='ggb'/}</div>
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">家居风水</div><div class="txt_r">><a href="/fengshui/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        {dede:arclist row=1 orderby=rand typeid=5 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+                        </div>
+			<div class="lm_r">
+                          {dede:arclist typeid='5' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></div>
+                        {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=5 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">绿色装修</div><div class="txt_r">><a href="/zhuangxiu/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                         {dede:arclist row=1 orderby=rand typeid=9 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+ 
+                         </div>
+			<div class="lm_r">
+				 {dede:arclist typeid='9' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></div>
+                        {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=9 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg">{dede:myad name='ggc'/}</div>
+<div>
+	<div class="lmbox l4">
+		<div class="lm_top"><div class="lmtxt">监理验收</div><div class="txt_r">><a href="/jianliyanshou/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                         {dede:arclist row=1 orderby=rand typeid=13 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+
+                         </div>
+			<div class="lm_r">
+				{dede:arclist typeid='13' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></div>
+                        {/dede:arclist}	
+               		</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=13 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="lmbox l4 ll">
+		<div class="lm_top"><div class="lmtxt">政策法规</div><div class="txt_r">><a href="/zhengcefagui/index.shtml">更多</a></div><div class="clear"></div></div>
+		<div class="lm_bot">
+			<div class="lm_n">
+			<div class="lmn_img">
+                        {dede:arclist row=1 orderby=rand typeid=14 type='image.'}
+                          [field:imglink/]
+                        {/dede:arclist}
+                         </div>
+			<div class="lm_r">
+				{dede:arclist typeid='14' row=1 infolen=100 titlelen=24 att='6'}
+				<div class="lm_rtxt"><a href="[field:filename /]" target="_blank" title="[field:title/]">[field:title /]</a></div>
+				<div class="lm_rtxt2">[field:info /]<a href="[field:filename /]" target="_blank" title="[field:title/]">...</a></div>
+                        {/dede:arclist}
+			</div>
+			<div class="clear"></div>
+			</div>
+				<div class="lm_rtxt2">
+				{dede:arclist row=6 titlelen=24 orderby=rand typeid=14 col=2}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+								</div>
+			<div class="clear"></div>
+		</div>
+	<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	</div>
+<div class="gg">{dede:myad name='ggd'/}</div>
+</div>
+<div class="lmr">
+	<div class="lmr_a l4">
+		<div class="lmr_at"><div class="lmr_atxt">装饰装修</div><div class="txt_r">><a href="/shejishi/index.shtml">更多</a></div></div>
+	<div class="lmr_img">
+         {dede:arclist row=1 titlelen=16 orderby=rand typeid=12 att=6}
+                          [field:imglink/]<br />
+                          [field:textlink/]
+                        {/dede:arclist}
+        </div>
+	<div class="lmr_txta">
+	{dede:arclist row=6 titlelen=24 orderby=rand typeid=12 col=1}
+                                <li>[field:textlink/]</li>
+                                  {/dede:arclist}
+	</div>
+	</div>
+	<div class="lmr_a l4 lt">
+		<div class="lmr_at"><div class="lmr_atxt">论坛精华</div><div class="txt_r">><a href="http://bbs.jiaju001.com/">更多</a></div></div>
+	    <div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_dhI"></script>
+	</div>
+	</div>
+	<div class="lmr_b l4 lt">
+		<div class="lmr_at"><div class="lmr_atxt">论坛热帖</div><div class="txt_r">><a href="http://bbs.jiaju001.com/">更多</a></div></div>
+	    <div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_hot"></script>
+	</div>
+	</div>
+	<div class="lmr_b l4 lt">
+		<div class="lmr_at"><div class="lmr_atxt">装修问答</div><div class="txt_r">><a href="http://bbs.jiaju001.com/">更多</a></div></div>
+	    <div class="lmr_txt">
+	<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_news"></script>
+	</div>
+	</div>
+	<div class="gg2"><a href="http://www.jiaju001.com/store/wanghe.html"><img src="/images/img4.jpg" width="235px" hight="130px" border="0"></a></div>
+<div class="clear"></div>
+</div>
+<div>
+<div class="clear"></div>
+</div>
+<div>
+</div>
+</div>
+<div class="wrap l4">
+<div class="bot_top"><div class="sjtxt">装修图片</div></div>
+<div class="bot_img">
+{dede:arclist row=12 titlelen=12 orderby=rand typeid=18 col=6}
+<li>[field:imglink/]<br />[field:textlink/]</li>
+{/dede:arclist}
+<div class="clear"></div>
+</div>
+</div>
+<div class="wrap">
+<div class="lt"  style="float:left">{dede:myad name='mm'/}</div>
+<div class="lt"  style="float:left">
+<table width="950px" height="20" border="0" cellspacing="0" cellpadding="0" style="text-align:center">
+  <tr>
+    <td style='width:180px;'><div style="position:relative">
+      <embed style="position:relative; z-index:0; " src="/images/dh180.swf"  quality=high width=180 height=100 type="application/x-shockwave-flash"  pluginspage=" http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"  wmode="opaque"> </embed>
+      <a href=" http://fuwu.andfang.com" target="_blank" style="cursor:pointer">
+        <div style="position:absolute;filter:alpha(opacity=0);opacity :0;-moz- opacity:0;left:0px;top:0px; background:#CDEAF6;width:180px;height:100px;z-index:10"> </div>
+      </a> </div></td>
+    <td><a href="http://www.jc186.cn/" target="_blank"><img src="/images/nfjcw.jpg" /></a></td>
+    <td><a href="http://www.myfun7.com/" target="_blank"><img src="/images/myfun7.gif" /></a></td>
+    <td><a href="http://www.wenshaktv.com/" target="_blank"><img src="/images/360.png" /></a></td>
+  </tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<div class="wrap lin" style="margin-top:5px !important; margin-top:5px;"><div class="p4"><div style="text-align:right"><div style="float:left"><strong>友情连接</strong></div><a href='{dede:field name='phpurl'/}/flink.php'>更多>></a> | <a href="{dede:field name='phpurl'/}/flink-add.php">申请加入</a></div>
+{dede:flink row='24' linktype=2/}
+</div></div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

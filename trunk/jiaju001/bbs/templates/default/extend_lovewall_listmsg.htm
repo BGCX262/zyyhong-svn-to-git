@@ -1,0 +1,32 @@
+<form method="post" name="moderate" action="lovewall.php?index=listmsg">
+<table cellspacing="1" cellpadding="3" width="98%" align="center" class="tableborder">
+<tr><td colspan="6" class="header">
+<table cellspacing="0" cellpadding="0" width="100%">
+<tr class="smalltxt"><td width="65%" class="bold">管理祝福信息</td>
+<td width="35%" align="right" nowrap>&nbsp;</td></tr></table></td></tr>
+<tr class="category">
+<td width="5%" align="center">选项</td>
+<td width="9%" align="center" nowrap>祝福ID</td>
+<td width="9%" align="center" nowrap>用户ID</td>
+<td width="13%" align="center" nowrap>用户名</td>
+<td width="14%" align="center" nowrap>发布时间</td>
+<td width="50%" align="center">祝福内容</td>
+</tr>
+<!--{loop $lovewall $key $love}-->
+<tr>
+<td class="altbg2" align="center"><input class="checkbox" type="checkbox" name="moderate[]" value="$love['id']"></td>
+<td class="altbg1" align="center">$love['id']</td>
+<td class="altbg2" align="center">$love['uid']</td>
+<td class="altbg1" align="center">$love['uname']</td>
+<td class="altbg2" align="center">$love['lovetime']</td>
+<td class="altbg1" align="left">$love['lovesay']</td>
+</tr>
+<!--{/loop}-->
+
+<tr><td colspan="7" class="altbg1" align="center">
+	<span class="bold">{lang admin_moderate}</span> &nbsp;
+	<input class="checkbox" type="checkbox" name="chkall" onclick="checkall(this.form, 'moderate')"> 全选 
+	<input class="radio" type="radio" name="operation" value="move"> 删除 
+	<a href="###" onclick="javascript: document.moderate.submit()" class="bold">[&nbsp;提交&nbsp;]</a>
+</td></tr></table>
+</form>

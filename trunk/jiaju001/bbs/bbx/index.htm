@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>生活百宝箱</title>
+<link href="res/zl_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/baike.js"></script>
+<script language="javascript">
+
+	function fInitBaike(){
+		var nLength = aBaike.length;
+		var sBaike = aBaike[Math.round(Math.random()* (nLength-1) )];
+		document.getElementById("sBaike").innerHTML = sBaike;
+		document.getElementById("sBaike").title = sBaike;
+		return false;
+	}
+
+//-->
+</script>
+</head>
+<body lang="zh" onLoad="fInitBaike();">
+<div align="center">
+<style>
+.yodaoTab a:link, .yodaoTab a:visited, .yodaoTab a:hover {color:#1f3a87}
+td.remindtt75 {font-size:12px; padding:2px;}
+td.remindtt752 {font-size:12px; padding-left:2px; padding-right:2px;color:#9e9e9e;}
+.jstxhuitiaozuo {background-color:#EFEFF0; color:#8D9DBE; font-size:12px; padding-left:5px; padding-top:1px;}
+.jstxhuitiaoyou {background-color:#EFEFF0; color:#8D9DBE; font-size:12px; padding-right:5px;}
+.aa_highlight {background-color:#DFE9F3; color:#000000;}
+span.xukezheng, .remindpgray {color:#008000;}
+.jstxlan:hover {color:#BC2931; text-decoration:underline; }
+.jstxlan {color:#1F3A87; font-size:100%; cursor:pointer}
+.cTabSelected {color:Black;font-weight:bold}
+.cTab:hover{text-decoration:underline}
+.cTab{color:#1F3A87;text-decoration:none;cursor:pointer;}
+ </style>
+<img id="suggestImage" src="http://images.163.com/yodao/pack70871/downarrow.gif" style="display:none;position:absolute;z-index:100;width:13px;cursor:pointer;" onClick="pressPoint(this)" height="10px" width="13px"/>
+<script type="text/javascript" src="js/autocomplete.js"></script>
+<div id="suggestDiv" style="z-index:20">
+	<iframe id="myId1" style="margin: 1px 0pt 0pt; padding: 0pt; position: absolute; display: none;"></iframe>
+	<div ></div>
+	<div id="myId3" style="position: absolute; display: none; z-index:-10"></div>
+</div>
+<div class="INDEX_Top" style="z-index:1">
+	<div class="IND_T_L"></div>
+	<div class="IND_T_R"></div>
+	<div class="SER_tab"></div>	
+</div>
+
+<!--顶部部分 结束-->
+<div class="clear"></div>
+<div class="IND_main">
+<!--主体内容左侧 开始-->
+<div class="IND_M_L">
+	<div class="clear"></div>
+	<div class="IND_M_L_N_wide">
+		<div class="IND_M_L_N_inside">
+		<b class="icon_d"></b>
+		<div class="IND_M_L_N_inside_Cont"><strong><a href="baike/jk_1.htm">百科知识：</a></strong><span id="sBaike">冬日禁忌 - 忌常舔嘴唇，忌涂纯甘油，忌睡前洗头，忌戴口罩，忌不戴帽忌常舔嘴唇，忌涂纯甘油，忌睡前洗头，忌戴口罩，忌不戴帽忌常舔嘴唇，忌涂纯甘油，忌睡前洗头，忌戴口罩，忌不戴帽子</span></div>
+		<a href="#" onClick="return fInitBaike();"title="更换一条" class="IND_M_ref"></a>
+		</div>
+	</div>	
+	<!--图标功能推荐 开始-->
+	<div class="IND_TJ_area">
+	
+
+		<a class="Ico_aBox" href="calendar/index.htm">
+			<div class="Ico_aBox_icon INico1"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">万年历</div>
+			<div class="Ico_aBox_intro">查看农历/公历/各种重要节日等</div>
+		</a>
+	
+		<a class="Ico_aBox" href="caipu/sc_index.htm">
+			<div class="Ico_aBox_icon INico12"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">家常菜谱</div>
+			<div class="Ico_aBox_intro">各大菜系，可口佳肴，简单易学</div>
+		</a>
+	
+		<a class="Ico_aBox" href="train/index.htm">
+			<div class="Ico_aBox_icon INico3"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">火车查询</div>
+			<div class="Ico_aBox_intro">全国火车起点/终点/车次信息查询</div>
+		</a>
+	
+		<a class="Ico_aBox" href="air/index.htm">
+			<div class="Ico_aBox_icon INico4"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">航班查询</div>
+			<div class="Ico_aBox_intro">查询国内机票信息，轻松出行</div>
+		</a>
+	
+		<a class="Ico_aBox" href="computer/jsq_shuxue.htm">
+			<div class="Ico_aBox_icon INico10"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">万用计算器</div>
+			<div class="Ico_aBox_intro">数学/按揭/存贷/所得税/健康计算器</div>
+		</a>
+	
+		<a class="Ico_aBox" href="shouji/index.htm">
+			<div class="Ico_aBox_icon INico6"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">手机归属地查询</div>
+			<div class="Ico_aBox_intro">准确判断陌生来电所在地区</div>
+		</a>
+	
+		<a class="Ico_aBox" href="query/index.htm#t=6">
+			<div class="Ico_aBox_icon INico8"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">邮编查询</div>
+			<div class="Ico_aBox_intro">提供地名/邮编，地名/区号互查</div>
+		</a>
+		
+		<a class="Ico_aBox" href="xingzuo/zl_xingzuo.htm">
+			<div class="Ico_aBox_icon INico14"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">星座</div>
+			<div class="Ico_aBox_intro">浪漫的星座传说，解读你的人生</div>
+		</a>
+	
+		<a class="Ico_aBox" href="query/index.htm#t=3">
+			<div class="Ico_aBox_icon INico9"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">海量词典</div>
+			<div class="Ico_aBox_intro">英汉、汉英、英英翻译和例句</div>
+		</a>
+		
+		<a class="Ico_aBox" href="map/zl_ditu.htm">
+			<div class="Ico_aBox_icon INico11"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">城市地图</div>
+			<div class="Ico_aBox_intro">提供中国境内电子地图搜索服务</div>
+		</a>
+			
+		<a class="Ico_aBox" href="query/index.htm#t=4">
+			<div class="Ico_aBox_icon INico5"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">身份证查询</div>
+			<div class="Ico_aBox_intro">对接官方数据，确定身份信息</div>
+		</a>
+
+	
+		<a class="Ico_aBox" href="bus/zl_gongjiao.htm">
+			<div class="Ico_aBox_icon INico2"></div>
+			<div class="Ico_aBox_sha"></div>
+			<div class="Ico_aBox_tit">公交查询</div>
+			<div class="Ico_aBox_intro">全国各大城市的公交线路/换乘查询</div>
+		</a>
+			
+	</div>
+	<!--图标功能推荐 结束-->
+</div>
+<!--主体内容左侧 结束-->
+<!--主体内容右侧 开始-->
+<div class="IND_M_R">
+	<!--广告部分 开始-->
+	<div class="IND_BQ" style="margin-top:0px"><br />
+	  <br />
+	</div>
+	<!--广告部分 结束-->
+	<!--天气预报部分 开始-->
+	<div class="IND_Time" style="margin-top:5px">
+		<div class="tit">天气预报</div>
+		<iframe id="weather" border="0" vspace="0" hspace="0" marginwidth="0" marginheight="0" framespacing="0" frameborder="0" scrolling="no" width="250" height="200" src="http://www.soso.com/tb.q"></iframe>
+	</div>
+	<!--时间部分 结束-->
+</div>
+<!--主体内容右侧 结束-->
+</div>
+<div class="clear"></div>
+<!--中缝推荐 开始-->
+<div class="IND_M_line">
+	<div class="tit">其他工具</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="holiday/index.htm">节日一览表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="chaodai/zl_chaodai.htm">中国朝代表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="shengxiao/zl_shengxiao.htm">生肖属相</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="query/index.htm#t=1">IP查询</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.7788sj.com/tool/zt.htm">转帖工具</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="tangshi/1_index.htm">唐诗</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="songci/index.htm">宋词</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="chengyu/index.htm">成语词典</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+</div>
+<!--中缝推荐 结束-->
+
+<div class="IND_lwide">
+	<div class="wdL"></div>
+	<span class="fl">生活百宝箱</span>	
+	<div class="wdR"></div>	
+	<span class="fr">版权所有 &copy;1997-2008 </span>		
+
+</div></div>
+</body>
+</html>

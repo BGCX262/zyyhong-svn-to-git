@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="25";
+$z[1]=Array("datalist"," \r\n    <tr bgcolor=\"#FFFFFF\" align=\"center\" onMouseMove=\"javascript:this.bgColor='#EFEFEF';\" onMouseOut=\"javascript:this.bgColor='#FFFFFF';\" height=\"22\"> \r\n      <td>[field:aid/]</td>\r\n      <td>[field:rulename/]</td>\r\n      <td>[field:etype/]</td>\r\n      <td>[field:dtime function='GetDateMk(@me)'/]</td>\r\n      <td style=\"padding-top:6px\">\r\n      	<a href=\"co_export_rule_edit.php?aid=[field:aid/]\">修改</a> |\r\n      	<a href=\"co_export_rule_edit.php?aid=[field:aid/]&action=export\">导出配置</a> |\r\n      	<a href=\"co_export_rule_edit.php?aid=[field:aid/]&action=delete\">删除</a>\r\n      </td>\r\n    </tr>\r\n    ",1670,2320);
+$z[2]=Array("pagelist","",2415,2441);
+$z[2][4]['size']="5";
+
+?>

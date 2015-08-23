@@ -1,0 +1,26 @@
+<?php
+global $_Cs;
+$_Cs=array();
+$_Cs[2]=array(0,1,1);
+$_Cs[3]=array(0,1,1);
+$_Cs[4]=array(0,1,1);
+$_Cs[5]=array(0,1,1);
+$_Cs[6]=array(0,1,1);
+$_Cs[7]=array(0,1,1);
+$_Cs[8]=array(0,1,1);
+$_Cs[9]=array(0,1,1);
+$_Cs[10]=array(0,1,1);
+$_Cs[11]=array(0,1,1);
+$_Cs[12]=array(0,1,0);
+$_Cs[13]=array(0,1,0);
+$_Cs[14]=array(0,1,0);
+$_Cs[15]=array(0,1,0);
+$_Cs[16]=array(0,1,0);
+$_Cs[17]=array(16,1,0);
+$_Cs[18]=array(0,2,1);
+$_Cs[19]=array(18,2,1);
+$_Cs[20]=array(18,2,1);
+$_Cs[21]=array(18,2,1);
+$_Cs[22]=array(0,1,0);
+$_Cs[23]=array(0,1,0);
+?>

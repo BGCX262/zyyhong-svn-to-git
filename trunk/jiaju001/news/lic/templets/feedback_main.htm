@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>评论管理</title>
+<script type="text/javascript" src="main.js"></script>
+<script language='javascript'>
+//获得选中文件的文件名
+function getCheckboxItem()
+{
+	var allSel="";
+	if(document.feedback.fid.value) return document.feedback.fid.value;
+	for(i=0;i<document.feedback.fid.length;i++)
+	{
+		if(document.feedback.fid[i].checked)
+		{
+			if(allSel=="")
+				allSel=document.feedback.fid[i].value;
+			else
+				allSel=allSel+"`"+document.feedback.fid[i].value;
+		}
+	}
+	return allSel;	
+}
+function selAll()
+{
+	for(i=0;i<document.feedback.fid.length;i++)
+	{
+		document.feedback.fid[i].checked=true;
+	}
+}
+function selNone()
+{
+	for(i=0;i<document.feedback.fid.length;i++)
+	{
+		document.feedback.fid[i].checked=false;
+	}
+}
+function selNor()
+{
+	for(i=0;i<document.feedback.fid.length;i++)
+	{
+		if(document.feedback.fid[i].checked==false)
+			document.feedback.fid[i].checked=true;
+		else
+			document.feedback.fid[i].checked=false;
+		
+	}
+}
+function delFeedback()
+{
+	var qstr=getCheckboxItem();
+	if(qstr=="") alert("你没选中任何内容！");
+	else if(window.confirm('你确定要删除这些评论吗?')) location.href="feedback_d.php?job=del&fid="+qstr;
+}
+function checkFeedback()
+{
+	var qstr=getCheckboxItem();
+	if(qstr=="") alert("你没选中任何内容！");
+	else location.href="feedback_d.php?job=check&fid="+qstr;
+}
+function editFeedback()
+{
+	var qstr=getCheckboxItem();
+	if(qstr=="") alert("你没选中任何内容！");
+	else location.href="feedback_edit.php?job=edit&fid="+qstr;
+}
+</script>
+<link href="css_body.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">文档维护</div>
+</div>
+<table width="96%" border="0" cellpadding="1" cellspacing="1" align="center" class="tbtitle" style="	background:#E2F5BC;">
+<form name='form1'>
+<tr>
+<td height="18" bgcolor="#EDF9D5" style="padding-top:6px">
+&nbsp;
+<b>评论管理</b>
+关键字：
+<input type='text' size='15' name='keyword' style='width:150px'>
+<input type='submit' name='sb' value=' 确定 'class="inputbut"> </td>
+</tr>
+</form>
+<form name='feedback'>
+<tr>
+<td height="215" bgcolor="#FFFFFF" valign="top">
+<table width='100%' border='0' cellpadding='0' cellspacing='0'>
+<?php 
+$mylist = $dlist->GetDataList();
+while($row = $mylist->GetArray('dm'))
+{
+	if(!empty($row['aid'])){
+		//$arcurl = $cfg_plus_dir.'/view.php?aid='.$row['aid'];
+		$arcurl = "archives_do.php?aid={$row['aid']}&dopost=editArchives";
+	}
+	else $arcurl = $row['url'];
+	if(empty($row['arctitle'])) $row['arctitle'] = "无法取得文档标题";
+?>
+<tr height='25'> 
+<td style="padding:3px">
+<table width="100%" border="0" cellpadding="0" cellspacing="1">
+<tr bgcolor="#F7F7F7"> 
+<td width="9%"> &nbsp;选择 
+<input name="fid" type="checkbox"  id="fid" value="<?php echo $row['ID']?>" class="np" />
+</td>
+<td width="37%">
+&nbsp;
+用户： <?php echo $row['username'];?>&nbsp;
+文档：<a href='<?php echo $arcurl; ?>' target="_blank"><?php echo $row['arctitle'];?></a>
+</td>
+<td width="18%" align="center">
+	IP地址： <?php echo $row['ip']; ?>
+</td>
+<td width="26%">
+	&nbsp;时间： <?php echo GetDateTimeMK($row['dtime'])?>
+</td>
+<td width="10%" align="center">
+	<a href='feedback_edit.php?ID=<?php echo $row['ID']?>'><img src="img/feedback-edit.gif" border="0" width="45" height="18"></a>
+</td>
+</tr>
+<tr align="center" bgcolor="#FFFFFF"> 
+<td height="28" colspan="5">
+	<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td align="left">
+<?php echo IsCheck($row['ischeck']); ?>
+<?php echo $row['msg'];?>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+<?php 
+}
+?>
+<tr>
+<td height='36' align='center' bgcolor='#EAEEE1'>
+  <?php echo $dlist->GetPageList(7);?></td>
+</tr>
+<tr> 
+<td height='30'>
+<table width="98%">
+<tr>
+<td width="30%" height="30" style="padding-top:6px;padding-left:6px">
+<input type='button' name='kk1' value='全选' onClick="selAll()" class="inputbut"> 
+<input type='button' name='kk2' value='取消' onClick="selNone()" class="inputbut">
+<input type='button' name='kk3' value='反选' onClick="selNor()" class="inputbut"></td>
+<td align="right" style="padding-top:6px;padding-right:6px">
+<input type='button' name='db' value=' 删除评论 ' onClick="delFeedback()" class='inputbut'>
+&nbsp;
+<input type='button' name='db2' value=' 审核评论 ' onClick="checkFeedback()" class='inputbut'>
+</td>
+</tr>
+</table> </td>
+</tr>
+</table></td>
+</tr>
+</form>
+</table>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文档管理</title>
+<link href="css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/context_menu.js"></script>
+<script language="javascript" src="js/ieemu.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script language="javascript" src='arclist.js'></script>
+<style type="text/css">
+<!--
+td{ padding-left:3px; }
+-->
+</style>
+</head>
+<body leftmargin="8"topmargin="8" onLoad="ContextMenu.intializeContextMenu()">
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">文档维护</div>
+	<div style='float:right;padding-top:8px;padding-right:16px;'>
+  <select name='channelid' style='width:110px' onchange="location=this.value;">
+  <?php echo GetChannelOptopns($dsql,$channelid); ?>
+  </select>
+  </div>
+</div>
+<table width="96%" border="0" cellpadding="1" cellspacing="1" align="center" class="tbtitle" style="background:#E2F5BC;">
+  <tr>
+    <td height="26">
+  <table width="98%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+  <td height="33" align="center"  style="padding-top:6px">
+  <input type='button' onClick="location='catalog_do.php?channelid=<?php echo $channelid?>&cid=<?php echo $cid?>&dopost=addArchives';" value='添加文档' class='inputbut'>
+  <?php  if($adminid>0){ ?>
+	<input type='button' onClick="location='content_list.php?channelid=<?php echo $channelid?>&cid=<?php echo $cid?>&adminid=0';" value='全部文档' class='inputbut'>	
+	<?php  }else{ ?>
+	<input type='button' onClick="location='content_list.php?channelid=<?php echo $channelid?>&cid=<?php echo $cid?>&adminid=<?php echo $cuserLogin->getUserID()?>';" value='我的文档' class='inputbut'>
+	<?php  } 
+	echo $CheckUserSend
+  ?>
+  <input type='button' onclick="location='catalog_main.php';" value='栏目管理' class='inputbut' />
+  <input type='button' name='bb1' onclick="location='makehtml_list.php?cid=<?php echo $cid?>';" value='更新列表' class='inputbut' />
+  <input type='button' name='bb2' onclick="location='makehtml_archives.php?cid=<?php echo $cid?>';" value='更新文档' class='inputbut' />
+  </td>
+   </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+
+<table width='96%' border='0' cellpadding='1' cellspacing='1' style="background:#E2F5BC;margin-top:6px" align="center">
+<tr height='26'> 
+<td colspan='7' bgcolor="#EDF9D5">
+§<?php echo $positionname?>文档列表 &nbsp;(使用鼠标右键进行常用操作)</td>
+</tr>
+<tr bgcolor="#F8FBFB" align="center"> 
+<td width="13%" style="padding:3px">文档图片</td>
+<td width="35%">文档标题</td>
+<td width="12%">类目</td>
+<td width="11%">权限</td>
+<td width="10%">管理员</td>
+<td width="10%">HTML</td>
+<td  width="9%">点击</td>
+ </tr>
+<form name="form2">
+<?php 
+$mylist = $dlist->GetDataList();
+while($row = $mylist->GetArray('dm'))
+{
+?>
+<tr height='68'> 
+<td width="13%" align="center" bgcolor="#FFFFFF">
+	<img src="<?php  echo CheckPic($row['litpic']); ?>" width="80" height="60" alt="文档图片" border="0">
+</td>
+<td width="35%" bgcolor="#FFFFFF">
+<input name="arcID" type="checkbox" id="arcID" value="<?php echo $row['ID']?>" class="np" /> 
+<b>
+	<a href="archives_do.php?aid=<?php echo $row['ID']?>&dopost=editArchives" oncontextmenu="ShowMenu(this,<?php echo $row['ID']?>,'<?php echo urlencode($row['title'])?>')">
+		<u><?php echo $row['title']; ?></u>
+	</a>
+<br />
+发布时间：<?php echo GetDateTimeMk($row['senddate']); ?>
+</b>
+</td>
+<td width="12%" height="26" align="center" bgcolor="#FFFFFF">
+<?php echo $row['typename']?>
+<br>
+ID: <?php echo $row['ID']?></td>
+<td width="11%" align="center" bgcolor="#FFFFFF"><?php echo GetRankName($row['arcrank'])?></td>
+<td width="10%" align="center" bgcolor="#FFFFFF"><?php echo $row['adminname']?></td>
+<td width="10%" align="center" bgcolor="#FFFFFF"><?php echo IsHtmlArchives($row['ismake'])?></td>
+<td  width="9%" align="center" bgcolor="#FFFFFF"><?php echo $row['click']?></td>
+</tr>
+<?php 
+}
+?>
+</form>
+<tr>
+	<td height="28" colspan='7' style="padding-left:6px;padding-top:8px;background-color:#F5FBE6">
+   <a href="javascript:selAll()" class="inputbutx">全选</a>
+   <a href="javascript:noSelAll()" class="inputbutx">取消</a>
+   <a href="javascript:viewArc(0)" class="inputbutx">查看</a>
+   <a href="javascript:editArc(0)" class="inputbutx">更改</a>
+   <a href="javascript:updateArc(0)" class="inputbutx">更新</a>
+   <a href="javascript:checkArc(0)" class="inputbutx">审核</a>
+   <a href="javascript:adArc(0)" class="inputbutx">推荐</a>
+   <a href="javascript:moveArc(0)" class="inputbutx">移动</a>
+   <a href="javascript:delArc(0)" class="inputbutx">删除</a>   
+</td>
+</tr>
+<tr>
+  <td height="28" colspan='7' align='center' style="background-color:#EEF7D2">
+    <?php echo $dlist->GetPageList(7);?></td>
+  </td>
+</tr>
+</table>
+
+<table width="96%" border="0" cellpadding="1" cellspacing="1" align="center" class="tbtitle" style="	background:#E2F5BC;">
+<tr> 
+<td height="4"></td>
+</tr>
+<tr> 
+<td style="border: 1px solid #525252;" height="26">
+<table width='100%'  border='0' cellpadding='0' cellspacing='1'>
+   <tr> 
+   <form action='content_i_list.php' method='get' name='form3' id="form3">
+      <input type='hidden' name='dopost' value='listArchives' />
+          <td>
+          	<table width='720' border='0' cellpadding='0' cellspacing='0'>
+          	<tr>
+          	<td width='90' align='center'>请选择类目：</td>
+          	<td width='160'>
+          	<?php echo $optionarr?>
+        </td>
+        <td width='70'>
+          关键字：
+        </td>
+          <td width='160'>
+          	<input type='text' name='keyword' value='<?php echo $keyword?>' style='width:150'>
+          </td>
+          <td width='110'>
+          	<select name='orderby' style='width:100'>
+            <option value='ID'>排序...</option>
+            <option value='senddate'>录入时间</option>
+            <option value='pubdate'>发布时间</option>
+            <option value='sortrank'>置顶权值</option>
+            <option value='click'>点击量</option>
+            <option value='postnum'>评论次数</option>
+            <option value='lastpost'>最后评论</option>
+           </select>
+          </td>
+          <td>
+          <input name="imageField" type="submit" class="inputbut" value="搜索">
+         </td>
+        </tr>
+        </table>
+          </td>
+        </form>
+        </tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td colspan="2" height="4"></td>
+</tr>
+</table>
+
+</body>
+</html>

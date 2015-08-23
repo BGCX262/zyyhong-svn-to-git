@@ -1,0 +1,38 @@
+<?php
+$z[0]=Array("global","",271,304);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("field","",360,389);
+$z[1][4]['name']="keywords";
+$z[2]=Array("field","",427,485);
+$z[2][4]['name']="description";
+$z[2][4]['function']="html2text(@me)";
+$z[3]=Array("field","",501,532);
+$z[3][4]['name']="templeturl";
+$z[4]=Array("field","",598,629);
+$z[4][4]['name']="templeturl";
+$z[5]=Array("list","\r\n			<dl>\r\n				<dd class=\"speimg\">[field:imglink/]</dd>\r\n				<dd class=\"spetitle\">[field:textlink /]</dd>\r\n				<dd class=\"speinfo\"><strong>日期：</strong>[field:pubdate function=\"GetDateTimeMK(@me)\"/]   <strong>点击：</strong>[field:click/]   <strong>评论：</strong>[field:postnum/]  </dd>\r\n				<dt>[field:description/]</dt>\r\n			</dl>\r\n         ",1180,1622);
+$z[5][4]['pagesize']="15";
+$z[5][4]['col']="1";
+$z[5][4]['titlelen']="60";
+$z[5][4]['imgwidth']="96";
+$z[5][4]['imgheight']="56";
+$z[6]=Array("pagelist","",1706,1773);
+$z[6][4]['listsize']="7";
+$z[6][4]['listitem']="index pre pageno next end";
+$z[7]=Array("arclist","\r\n					<li>[field:textlink/]</li>\r\n					",1975,2090);
+$z[7][4]['row']="10";
+$z[7][4]['titlelen']="24";
+$z[7][4]['orderby']="click";
+$z[7][4]['type']="spec.";
+$z[8]=Array("arclist","\r\n					<li>[field:textlink/]</li>\r\n					",2268,2369);
+$z[8][4]['row']="10";
+$z[8][4]['titlelen']="24";
+$z[8][4]['orderby']="rand";
+$z[9]=Array("global","",2590,2623);
+$z[9][4]['name']="cfg_powerby";
+$z[10]=Array("global","",2679,2710);
+$z[10][4]['name']="cfg_beian";
+$z[11]=Array("global","",2807,2840);
+$z[11][4]['name']="cfg_version";
+
+?>

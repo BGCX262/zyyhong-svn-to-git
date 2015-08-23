@@ -1,0 +1,39 @@
+ErrorDocument 404 /core/error.php
+<IfModule mod_rewrite.c> 
+RewriteEngine On 
+RewriteBase / 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^store/(intro|product|cuxiao|product|note)-(.*)-tmpa-(.*)-tmpb-(.*).html$	/core/store.php?type=$1&ename=$2&tmpa=$3&tmpb=$4
+RewriteRule ^store/(.*).html$	/core/store.php?cats=$1
+RewriteRule ^store/	/core/store.php
+RewriteRule ^list/(.*).html$		/core/list.php?cats=$1
+RewriteRule ^cat/(.*).html$		/core/cat.php?cats=$1
+RewriteRule ^goods/([0-9]+).html$ 		/core/goods.php?id=$1
+RewriteRule ^jifen/list-(.*).html$ 	/core/jifen.php?list=$1
+RewriteRule ^jifen/(.*).html$ 		/core/jifen.php?id=$1
+RewriteRule ^jifen/			/core/jifen.php
+
+RewriteRule ^huodong/list-([0-9]+).html$ 	/core/event.list.php?page=$1
+RewriteRule ^huodong/([0-9]+).html$ 	/core/event.php?id=$1
+RewriteRule ^huodong/			/core/event.index.php
+
+RewriteRule ^taocan/list-([0-9]+)-([0-9]+).html$ 	/core/tao.list.php?listid=$1&page=$2
+RewriteRule ^taocan/([0-9]+).html$ 	/core/tao.php?id=$1
+RewriteRule ^taocan/			/core/tao.list.php
+
+RewriteRule ^card/$			/core/card.index.php
+RewriteRule ^cuxiao/list-([0-9]+)-([0-9]+).html$ 	/core/cuxiao.list.php?listid=$1&page=$2
+RewriteRule ^cuxiao/([0-9]+).html$ 		/core/cuxiao.php?id=$1
+RewriteRule ^cuxiao/			/core/cuxiao.list.php
+RewriteRule ^news/([a-z\-0-9]+).html$ 	/core/news.php?list=$1
+RewriteRule ^news/([0-9]+)/([0-9]+).html$ 	/core/news.php?id=$2
+
+RewriteRule ^(pai|gou)/list-(.*).html$ 	/core/$1.php?list=$2
+RewriteRule ^(pai|gou)/([0-9]+).html$ 		/core/$1.php?id=$2
+RewriteRule ^(pai|gou)/			/core/$1.php
+RewriteRule ^go/(.*)$		/core/go.php?m=$1
+RewriteRule ^member/(.*).html$		/member/index.php?p=$1
+RewriteRule ^verify$ 			/core/verify.php
+RewriteRule ^search$ 			/search.php
+</IfModule>

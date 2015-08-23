@@ -1,0 +1,8 @@
+<?php
+$z[0]=Array("page","",0,26);
+$z[0][4]['pagesize']="20";
+$z[1]=Array("datalist"," \r\n  <tr bgcolor=\"#FFFFFF\" align=\"center\"> \r\n    <td rowspan=\"2\">[field:userid /]</td>\r\n    <td rowspan=\"2\">[field:uname /]<br> </td>\r\n    <td>[field:usertype function=\"GetUserType('@me')\"/]</td>\r\n    <td>请查看详细</td>\r\n    <td rowspan=\"2\">\r\n	   <a href='sys_admin_user_edit.php?ID=[field:ID/]&dopost=edit'><u>更改</u></a> | \r\n     <a href='sys_admin_user_edit.php?ID=[field:ID/]&userid=[field:userid/]&dopost=delete'><u>删除</u></a> |\r\n     <a href='content_list.php?adminid=[field:ID/]'><u>文档</u></a> |\r\n     <a href='sys_admin_user_tj.php?ID=[field:ID/]'><u>详细统计</u></a>　　\r\n    </td>\r\n  </tr>\r\n  <tr> \r\n  <td colspan=\"2\" align=\"center\" bgcolor=\"#FFFFFF\">\r\n	登录时间：[field:logintime /]\r\n	IP：[field:loginip /]\r\n	</td>\r\n  </tr>\r\n  ",1718,2516);
+$z[2]=Array("pagelist","",2631,2661);
+$z[2][4]['listsize']="7";
+
+?>

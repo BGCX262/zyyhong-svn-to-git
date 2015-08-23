@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="{dede:field name='description' function='html2text(@me)'/}" name="description" />
+<meta content="{dede:field name='keywords'/}" name="keywords" />
+<link href='/images/news_style.css' rel='stylesheet' type='text/css'>
+<link href='http://www.jiaju001.com/images/common.css' rel='stylesheet' type='text/css'>
+<title>{dede:field name='title'/} - {dede:global name='cfg_webname'/}</title>
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<div class="wrap">
+	<div class="lml">
+	<div class="pag_txt">{dede:field name='typelink'/}| {dede:field name='position'/}{dede:field name="title"/}</div>
+<div class="d_top"></div>
+	<div class="l2">
+	  <div class="pag_listb">
+{dede:list pagesize='35' orderby=pubdate }
+<li class="r"><div class="fl ar">[field:typelink function='str_replace("a ","a class=ulink ",@me)'/]<a href="[field:arcurl/]">[field:title/]</a></div>[field:pubdate function=strftime('%Y-%m-%d',@me)/]</li>
+        {/dede:list}
+	</div>
+	<div class="pag_lista">{dede:pagelist listsize='4' listitem='index pre pageno next end '/}</div>
+	
+	</div>
+	<div class="d_bot"></div>
+	
+	<div class="clear"></div>
+	</div>
+<div class="lmr lp">
+	<!--#include virtual="/include/right.php" -->
+<div class="l4 lmr_a lt">
+	<div class="lmr_at"><div class="lmr_atxt">论坛推荐</div><div class="txt_r">><a href="http://bbs.jiaju001.com">更多</a></div></div>
+	<div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_dhI"></script>
+</div>
+	</div>
+	<div class="l4 lmr_b lt">
+	<div class="lmr_at"><div class="lmr_atxt">论坛热帖</div><div class="txt_r">><a href="http://bbs.homebjjj.com">更多</a></div></div>
+	<div class="lmr_txt">
+<script language="JavaScript" src="http://bbs.jiaju001.com/api/javascript.php?key=threads_hot"></script>
+</div>
+	</div>
+
+</div>
+
+
+<div class="clear"></div>
+</div>
+<!--#include virtual="/include/footer.html" -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global name='cfg_webname'/} - 专题列表</title>
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<link href="{dede:field name='templeturl'/}/style/dede.css" rel="stylesheet" type="text/css" />
+<link href="{dede:field name='templeturl'/}/style/special.css" rel="stylesheet" type="text/css" />
+<link href='/images/news_style.css' rel='stylesheet' type='text/css'>
+<link href='http://www.homebjjj.com/images/common.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--#include virtual="/include/header.html" -->
+<!--内容-->
+<div class="main cbody margintop">
+	<!--左侧-->
+	<div class="pleft">
+		<!--位置导航-->
+		<div class="thisplace">
+			<div class="title">专题列表</div>
+			<div class="placenav">
+
+			</div>
+		</div>
+
+		<div class="spelist">
+         {dede:list pagesize='15' col='1' titlelen='60' imgwidth='96' imgheight='56'}
+			<dl>
+				<dd class="speimg">[field:imglink/]</dd>
+				<dd class="spetitle">[field:textlink /]</dd>
+				<dd class="speinfo"><strong>日期：</strong>[field:pubdate function="GetDateTimeMK(@me)"/]   <strong>点击：</strong>[field:click/]   <strong>评论：</strong>[field:postnum/]  </dd>
+				<dt>[field:description/]</dt>
+			</dl>
+         {/dede:list}
+		</div>
+
+
+		<!--分页-->
+		<div class="pages">
+			<div class="plist">
+				{dede:pagelist listsize='7' listitem='index pre pageno next end '/}</div>
+		</div>
+
+	</div>
+
+	<!--右侧-->
+	<div class="pright">
+		<!--侧边信息列表-->
+		<div class="rlist">
+			<div class="title">热门专题</div>
+			<div class="rbox">
+				<ul>
+					{dede:arclist row=10 titlelen=24 orderby=click type='spec.'}
+					<li>[field:textlink/]</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+
+		<!--侧边信息列表-->
+		<div class="rlist margintop">
+			<div class="title">随机推荐</div>
+			<div class="rbox">
+				<ul>
+					{dede:arclist row=10 titlelen=24 orderby=rand}
+					<li>[field:textlink/]</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class="floatclear"><!--清除浮动--></div>
+</div>
+
+
+<div class="footer cbody margintop">
+		<div class="copyright"> 
+                <div style="font-size:12px">
+{dede:global name='cfg_powerby'/}
+                <a href="http://www.miibeian.gov.cn/">{dede:global name='cfg_beian'/}</a>              
+            </div> 
+		 Powered by <a href="http://www.dedecms.com/">DedeCms {dede:global name='cfg_version'/}</a> © 2004-2008  <a href="http://www.desdev.cn/">DesDev Inc.</a><br />
+	</div>
+	
+</div>
+
+
+</body>
+</html>
